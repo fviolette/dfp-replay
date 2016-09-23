@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- This file is part of the DITA Open Toolkit project hosted on 
+     Sourceforge.net. See the accompanying license.txt file for 
+     applicable licenses.-->
+<!-- (c) Copyright IBM Corp. 2004, 2006 All Rights Reserved. -->
+<project name="WidgetUserGuide" default="samples.pdf" basedir=".">
+  
+  <property name="dita.dir" location="C:/git/dfp-replay/DITA-OT1.8.5"/>
+  <property name="output.dir" location="c:/users/fviolette/desktop/out"/>
+  
+  <target name="samples.pdf" description="build the samples as PDF" depends="clean.samples.pdf">
+    <ant antfile="${dita.dir}/build.xml">
+      <property name="args.input" location="${dita.dir}/samples/taskbook.ditamap"/>
+      <property name="transtype" value="custpdf"/>
+    </ant>
+  </target>
+  
+  <target name="clean.samples.pdf" description="remove the sample PDF output">
+    <delete dir="${output.dir}"/>
+  </target>
+  
+</project>
