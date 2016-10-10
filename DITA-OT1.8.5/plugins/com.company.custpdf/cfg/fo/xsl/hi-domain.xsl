@@ -36,10 +36,20 @@ See the accompanying license.txt file for applicable licenses.
     version="2.0">
 
     <xsl:template match="*[contains(@class,' hi-d/b ')]">
-        <fo:inline xsl:use-attribute-sets="b_red">
+      <xsl:choose>
+        <xsl:when test="./@outputclass='red'">
+          <fo:inline xsl:use-attribute-sets="b_red" id="{@id}">
             <xsl:call-template name="commonattributes"/>
             <xsl:apply-templates/>
-        </fo:inline>
+          </fo:inline>
+        </xsl:when>
+        <xsl:otherwise>
+          <fo:inline xsl:use-attribute-sets="b" id="{@id}">
+            <xsl:call-template name="commonattributes"/>
+            <xsl:apply-templates/>
+          </fo:inline>
+        </xsl:otherwise>
+      </xsl:choose>
     </xsl:template>
 
     <xsl:template match="*[contains(@class,' hi-d/i ')]">
