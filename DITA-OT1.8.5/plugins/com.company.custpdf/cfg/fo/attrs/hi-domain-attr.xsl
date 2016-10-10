@@ -36,6 +36,11 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute-set name="b">
         <xsl:attribute name="font-weight">bold</xsl:attribute>
     </xsl:attribute-set>
+    
+    <xsl:attribute-set name="b_red">
+        <xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="color">red</xsl:attribute>
+    </xsl:attribute-set>
 
     <xsl:attribute-set name="i">
         <xsl:attribute name="font-style">italic</xsl:attribute>
