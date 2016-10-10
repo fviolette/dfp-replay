@@ -53,7 +53,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <logical-font name="Sans">
       <physical-font char-set="default">
-        <font-face>Helvetica, Arial Unicode MS</font-face>
+        <font-face>Trebuchet MS, Helvetica, Arial Unicode MS</font-face>
       </physical-font>
       <physical-font char-set="Simplified Chinese">
         <font-face>AdobeSongStd-Light</font-face>
@@ -71,7 +71,7 @@ See the accompanying license.txt file for applicable licenses.
         <font-face>ZapfDingbats</font-face>
       </physical-font>
       <physical-font char-set="SymbolsSuperscript">
-        <font-face>Helvetica, Arial Unicode MS</font-face>
+        <font-face>Trebuchet MS, Helvetica, Arial Unicode MS</font-face>
         <baseline-shift>20%</baseline-shift>
         <override-size>smaller</override-size>
       </physical-font>
@@ -79,7 +79,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <logical-font name="Serif">
       <physical-font char-set="default">
-        <font-face>Times New Roman, Times</font-face>
+        <font-face>Book Antiqua, Times New Roman, Times</font-face>
       </physical-font>
       <physical-font char-set="Simplified Chinese">
         <font-face>AdobeSongStd-Light</font-face>
@@ -97,7 +97,7 @@ See the accompanying license.txt file for applicable licenses.
         <font-face>ZapfDingbats</font-face>
       </physical-font>
       <physical-font char-set="SymbolsSuperscript">
-        <font-face>Times New Roman, Times</font-face>
+        <font-face>Book Antiqua, Times New Roman, Times</font-face>
         <baseline-shift>20%</baseline-shift>
         <override-size>smaller</override-size>
       </physical-font>
