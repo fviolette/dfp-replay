@@ -7,6 +7,7 @@
   
   <property name="dita.dir" location="C:/git/dfp-replay/DITA-OT1.8.5"/>
   <property name="output.dir" location="c:/users/fviolette/desktop/out"/>
+  <property name="retain.topic.fo" value="yes"/>
   
   <target name="samples.pdf" description="build the samples as PDF" depends="clean.samples.pdf">
     <ant antfile="${dita.dir}/build.xml">
