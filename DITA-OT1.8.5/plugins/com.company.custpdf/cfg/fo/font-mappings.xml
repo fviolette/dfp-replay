@@ -125,6 +125,11 @@ See the accompanying license.txt file for applicable licenses.
         <override-size>smaller</override-size>
       </physical-font>
     </logical-font>
+    <logical-font name="BigCorpFont">
+      <physical-font char-set="default">
+        <font-face>Big Corp Font</font-face>
+      </physical-font>
+    </logical-font>
   </font-table>
 
 </font-mappings>
