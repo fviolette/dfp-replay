@@ -16,7 +16,7 @@ find some.</shortdesc>
 </metadata></prolog>
 <taskbody>
 <steps-unordered>
-<step><cmd>If performance is slow, try removing several thousand records.</cmd>
+<step><cmd>If <b>performance</b> is slow, try removing several thousand records.</cmd>
 </step>
 <step><cmd>If none of your commands work, make sure they are SQL commands
 and not SEQUEL commands.</cmd></step>
