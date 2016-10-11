@@ -218,9 +218,8 @@ See the accompanying license.txt file for applicable licenses.
                             </fo:inline>
                         </heading>
                         <pagenum>
-                            <fo:inline xsl:use-attribute-sets="__body__first__footer__pagenum">
-                                <fo:page-number/>
-                            </fo:inline>
+                            <fo:retrieve-marker retrieve-class-name="current-chapter-number"/>
+                            <xsl:text>-</xsl:text>
                         </pagenum>
                     </xsl:with-param>
                 </xsl:call-template>
@@ -264,9 +263,8 @@ See the accompanying license.txt file for applicable licenses.
                             </fo:inline>
                         </heading>-->
                         <pagenum>
-                            <fo:inline xsl:use-attribute-sets="__body__odd__footer__pagenum">
-                                <fo:page-number/>
-                            </fo:inline>
+                            <fo:retrieve-marker retrieve-class-name="current-chapter-number"/>
+                            <xsl:text>-</xsl:text>
                         </pagenum>
                         <pubdate>
                             <xsl:value-of select="$pubDate"/>
@@ -294,9 +292,8 @@ See the accompanying license.txt file for applicable licenses.
                             </fo:inline>
                         </heading>-->
                         <pagenum>
-                            <fo:inline xsl:use-attribute-sets="__body__even__footer__pagenum">
-                                <fo:page-number/>
-                            </fo:inline>
+                            <fo:retrieve-marker retrieve-class-name="current-chapter-number"/>
+                            <xsl:text>-</xsl:text>
                         </pagenum>
                         <pubdate>
                             <xsl:value-of select="$pubDate"/>

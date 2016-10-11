@@ -697,14 +697,29 @@ See the accompanying license.txt file for applicable licenses.
 
     <xsl:template match="*[contains(@class, ' bookmap/chapter ')] |
                          opentopic:map/*[contains(@class, ' map/topicref ')]" mode="topicTitleNumber" priority="-1">
+        <fo:inline>
+            <fo:marker marker-class-name="current-chapter-number">
+                <xsl:number format="1" count="*[contains(@class, ' bookmap/chapter ')]"/>
+            </fo:marker>
+        </fo:inline>
       <xsl:number format="1" count="*[contains(@class, ' bookmap/chapter ')]"/>
     </xsl:template>
 
     <xsl:template match="*[contains(@class, ' bookmap/appendix ')]" mode="topicTitleNumber">
+        <fo:inline>
+            <fo:marker marker-class-name="current-chapter-number">
+                <xsl:number format="A" count="*[contains(@class, ' bookmap/appendix ')]"/>
+            </fo:marker>
+        </fo:inline>
       <xsl:number format="A" count="*[contains(@class, ' bookmap/appendix ')]"/>
     </xsl:template>
 
     <xsl:template match="*[contains(@class, ' bookmap/part ')]" mode="topicTitleNumber">
+        <fo:inline>
+            <fo:marker marker-class-name="current-chapter-number">
+                <xsl:number format="I" count="*[contains(@class, ' bookmap/part ')]"/>
+            </fo:marker>
+        </fo:inline>
       <xsl:number format="I" count="*[contains(@class, ' bookmap/part ')]"/>
     </xsl:template>
 
