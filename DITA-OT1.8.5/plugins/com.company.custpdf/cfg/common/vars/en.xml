@@ -87,7 +87,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <!-- The footer that appears on the odd-numbered table of contents
          pages. --> 
-    <variable id="Toc odd footer"></variable>
+     <variable id="Toc odd footer"><param ref-name="pubdate"/><param ref-name="copyright"/>TOC-<param ref-name="pagenum"/></variable>
 
     <!-- The footer that appears on the even-numbered table of contents
          pages. --> 
