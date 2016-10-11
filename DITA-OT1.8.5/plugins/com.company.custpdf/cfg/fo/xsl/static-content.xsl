@@ -121,21 +121,24 @@ See the accompanying license.txt file for applicable licenses.
                 <xsl:call-template name="insertVariable">
                     <xsl:with-param name="theVariableID" select="'Body odd header'"/>
                     <xsl:with-param name="theParameters">
-                        <prodname>
+                        <!--<prodname>
                             <xsl:value-of select="$productName"/>
-                        </prodname>
+                        </prodname>-->
                         <heading>
                             <fo:inline xsl:use-attribute-sets="__body__odd__header__heading">
                                 <fo:retrieve-marker retrieve-class-name="current-header"/>
                             </fo:inline>
                         </heading>
-                        <pagenum>
+                        <!--<pagenum>
                             <fo:inline xsl:use-attribute-sets="__body__odd__header__pagenum">
                                 <fo:page-number/>
                             </fo:inline>
-                        </pagenum>
+                        </pagenum>-->
                     </xsl:with-param>
                 </xsl:call-template>
+                <fo:inline>
+                    <fo:external-graphic src="url(Customization/OpenTopic/common/artwork/logo.png)"/>
+                </fo:inline>
             </fo:block>
         </fo:static-content>
 
