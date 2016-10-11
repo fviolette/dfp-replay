@@ -48,6 +48,10 @@
     <xsl:variable name="page-margin-outside">.75in</xsl:variable>
     <xsl:variable name="page-margin-top" select="$page-margins"/>
     <xsl:variable name="page-margin-bottom" select="$page-margins"/>
+    <xsl:variable name="body-margin">1.25in</xsl:variable>
+    <xsl:variable name="page-margin-outside-front" select="$page-margins"/>
+    <xsl:variable name="page-margin-top-front" select="$page-margins"/>
+    <xsl:variable name="page-margin-bottom-front" select="$page-margins"/>
 
     <!--The side column width is the amount the body text is indented relative to the margin. -->
     <xsl:variable name="side-col-width">25pt</xsl:variable>

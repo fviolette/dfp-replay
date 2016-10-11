@@ -5,5 +5,6 @@
     <xsl:import href="basic-settings.xsl"/>
     <xsl:import href="commons-attr.xsl"/>
     <xsl:import href="front-matter-attr.xsl"/>
+    <xsl:import href="layout-masters-attr.xsl"/>
     <xsl:import href="hi-domain-attr.xsl"/>
 </xsl:stylesheet>

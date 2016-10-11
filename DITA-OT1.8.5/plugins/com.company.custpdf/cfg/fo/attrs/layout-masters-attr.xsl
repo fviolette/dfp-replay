@@ -21,11 +21,12 @@
   
   <xsl:attribute-set name="region-body.odd">
     <xsl:attribute name="margin-top">
-      <xsl:value-of select="$page-margin-top"/>
+      <xsl:value-of select="$body-margin"/>
     </xsl:attribute>
     <xsl:attribute name="margin-bottom">
-      <xsl:value-of select="$page-margin-bottom"/>
+      <xsl:value-of select="$body-margin"/>
     </xsl:attribute>
+    <xsl:attribute name="background-color">#CCCCCC</xsl:attribute>
     <xsl:attribute name="{if ($writing-mode = 'lr') then 'margin-left' else 'margin-right'}">
       <xsl:value-of select="$page-margin-inside"/>
     </xsl:attribute>
@@ -36,11 +37,12 @@
 
   <xsl:attribute-set name="region-body.even">
     <xsl:attribute name="margin-top">
-      <xsl:value-of select="$page-margin-top"/>
+      <xsl:value-of select="$body-margin"/>
     </xsl:attribute>
     <xsl:attribute name="margin-bottom">
-      <xsl:value-of select="$page-margin-bottom"/>
+      <xsl:value-of select="$body-margin"/>
     </xsl:attribute>
+    <xsl:attribute name="background-color">#CCCCCC</xsl:attribute>
     <xsl:attribute name="{if ($writing-mode = 'lr') then 'margin-left' else 'margin-right'}">
       <xsl:value-of select="$page-margin-outside"/>
     </xsl:attribute>
@@ -50,8 +52,35 @@
   </xsl:attribute-set>
   
   <xsl:attribute-set name="region-body__frontmatter.odd" use-attribute-sets="region-body.odd">
+    <xsl:attribute name="margin-top">
+      <xsl:value-of select="$page-margin-top-front"/>
+    </xsl:attribute>
+    <xsl:attribute name="margin-bottom">
+      <xsl:value-of select="$page-margin-bottom-front"/>
+    </xsl:attribute>
+    <xsl:attribute name="{if ($writing-mode = 'lr') then 'margin-left' else 'margin-right'}">
+      <xsl:value-of select="$page-margin-inside"/>
+    </xsl:attribute>
+    <xsl:attribute name="{if ($writing-mode = 'lr') then 'margin-right' else 'margin-left'}">
+      <xsl:value-of select="$page-margin-outside-front"/>
+    </xsl:attribute>
+    <xsl:attribute name="background-color">#ffc0ff</xsl:attribute>
   </xsl:attribute-set>
+  
   <xsl:attribute-set name="region-body__frontmatter.even" use-attribute-sets="region-body.even">
+    <xsl:attribute name="margin-top">
+      <xsl:value-of select="$body-margin"/>
+    </xsl:attribute>
+    <xsl:attribute name="margin-bottom">
+      <xsl:value-of select="$body-margin"/>
+    </xsl:attribute>
+    <xsl:attribute name="{if ($writing-mode = 'lr') then 'margin-left' else 'margin-right'}">
+      <xsl:value-of select="$page-margin-outside-front"/>
+    </xsl:attribute>
+    <xsl:attribute name="{if ($writing-mode = 'lr') then 'margin-right' else 'margin-left'}">
+      <xsl:value-of select="$page-margin-inside"/>
+    </xsl:attribute>
+    <xsl:attribute name="background-color">#ffc0ff</xsl:attribute>
   </xsl:attribute-set>
   
   <!-- legacy attribute set -->
