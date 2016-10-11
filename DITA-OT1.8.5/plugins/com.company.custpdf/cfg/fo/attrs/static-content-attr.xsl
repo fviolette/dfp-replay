@@ -40,12 +40,14 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute name="end-indent">10pt</xsl:attribute>
     <xsl:attribute name="space-before">10pt</xsl:attribute>
     <xsl:attribute name="space-before.conditionality">retain</xsl:attribute>
+    <xsl:attribute name="padding-top">.5in</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="even__header">
     <xsl:attribute name="start-indent">10pt</xsl:attribute>
     <xsl:attribute name="space-before">10pt</xsl:attribute>
     <xsl:attribute name="space-before.conditionality">retain</xsl:attribute>
+    <xsl:attribute name="padding-top">.5in</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="odd__footer">
@@ -53,12 +55,14 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute name="end-indent">10pt</xsl:attribute>
     <xsl:attribute name="space-after">10pt</xsl:attribute>
     <xsl:attribute name="space-after.conditionality">retain</xsl:attribute>
+    <xsl:attribute name="padding-bottom">.5in</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="even__footer">
     <xsl:attribute name="start-indent">10pt</xsl:attribute>
     <xsl:attribute name="space-after">10pt</xsl:attribute>
     <xsl:attribute name="space-after.conditionality">retain</xsl:attribute>
+    <xsl:attribute name="padding-bottom">.5in</xsl:attribute>
   </xsl:attribute-set>
   
   <xsl:attribute-set name="pagenum">
