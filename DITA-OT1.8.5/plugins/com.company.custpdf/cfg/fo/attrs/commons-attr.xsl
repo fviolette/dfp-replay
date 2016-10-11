@@ -660,7 +660,7 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="force-page-count">
             <xsl:choose>
                 <xsl:when test="name(/*) = 'bookmap'">
-                    <xsl:value-of select="'even'"/>
+                    <xsl:value-of select="'auto'"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of select="'auto'"/>
