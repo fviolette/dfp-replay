@@ -284,7 +284,7 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:template name="insertBodyEvenFooter">
 
         <fo:static-content flow-name="even-body-footer">
-            <fo:block xsl:use-attribute-sets="__body__even__footer">
+            <fo:block xsl:use-attribute-sets="__body__even__footer__first">
                 <xsl:call-template name="insertVariable">
                     <xsl:with-param name="theVariableID" select="'Body even footer'"/>
                     <xsl:with-param name="theParameters">
@@ -293,21 +293,28 @@ See the accompanying license.txt file for applicable licenses.
                                 <fo:retrieve-marker retrieve-class-name="current-header"/>
                             </fo:inline>
                         </heading>-->
-                        <pagenum>
-                            <fo:retrieve-marker retrieve-class-name="current-chapter-number"/>
-                            <xsl:text>-</xsl:text>
-                        </pagenum>
-                        <pubdate>
-                            <xsl:value-of select="$pubDate"/>
-                        </pubdate>
-                        <copyright>
-                            <xsl:value-of select="$copyYear"/>
-                        </copyright>
+                        <prodname>
+                            <xsl:value-of select="$productName"/>
+                        </prodname>
+                        <version>
+                            <xsl:value-of select="$productVersion"/>
+                        </version>
+                    </xsl:with-param>
+                </xsl:call-template>
+            </fo:block>
+            <fo:block xsl:use-attribute-sets="__body__even__footer">
+                <xsl:call-template name="insertVariable">
+                <xsl:with-param name="theVariableID" select="'Body even footer'"/>
+                <xsl:with-param name="theParameters">
+                    <pagenum>
+                        <fo:inline xsl:use-attribute-sets="__body__even__footer__pagenum">
+                             <fo:page-number/>
+                        </fo:inline>
+                    </pagenum>
                     </xsl:with-param>
                 </xsl:call-template>
             </fo:block>
         </fo:static-content>
-
     </xsl:template>
 
     <xsl:template name="insertTocOddHeader">

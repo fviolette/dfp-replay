@@ -53,7 +53,7 @@ See the accompanying license.txt file for applicable licenses.
      <variable id="Body odd footer"><param ref-name="pubdate"/>&#xA0;Copyright &#169;&#xA0;<param ref-name="prodname"/>&#xA0;<param ref-name="pagenum"/></variable>
 
     <!-- The footer that appears on even-numbered pages. -->
-    <variable id="Body even footer"/>
+     <variable id="Body even footer"><param ref-name="pagenum"/><param ref-name="prodname"/>&#xA0;<param ref-name="version"/></variable>
 
     <!-- The footer that appears on the first page of a chapter. -->
      <variable id="Body first footer"><param ref-name="pubdate"/>&#xA0;Copyright &#169;&#xA0;<param ref-name="prodname"/>&#xA0;<param ref-name="pagenum"/></variable>

@@ -109,7 +109,6 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute name="font-size">9pt</xsl:attribute>
     <xsl:attribute name="font-weight">regular</xsl:attribute>
     <xsl:attribute name="color">#000000</xsl:attribute>
-    <xsl:attribute name="border-top">1pt solid black</xsl:attribute>
   </xsl:attribute-set>
   
   <xsl:attribute-set name="pagenum">
@@ -127,7 +126,10 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute-set name="__body__odd__footer__pagenum" use-attribute-sets="pagenum">
     </xsl:attribute-set>
 
-    <xsl:attribute-set name="__body__even__footer" use-attribute-sets="even__footer">
+    <xsl:attribute-set name="__body__even__footer__first" use-attribute-sets="even__footer">
+      <xsl:attribute name="border-top">1pt solid black</xsl:attribute>
+      <xsl:attribute name="padding-top">6pt</xsl:attribute>
+      <xsl:attribute name="margin-bottom">.5in</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__body__even__footer__heading">
