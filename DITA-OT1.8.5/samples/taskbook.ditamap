@@ -9,6 +9,15 @@
 <booktitlealt>Tasks and what they can do</booktitlealt></booktitle>
 <bookmeta>
 <author>Howe Tuduit</author>
+  <critdates>
+    <revised modified="2016-10-11" golive="2016-10-11"/>
+  </critdates>
+  <prodinfo>
+    <prodname>Valid test - prodname</prodname>
+    <vrmlist>
+      <vrm version="Valid test - vrm"/>
+    </vrmlist>
+  </prodinfo>
 <bookid><isbn>071271271X</isbn><booknumber>SG99-9999-00</booknumber><maintainer>
 <organization>Retro Tools</organization><person></person></maintainer></bookid>
 <bookrights><copyrfirst><year>2004</year></copyrfirst><copyrlast><year>2007</year>

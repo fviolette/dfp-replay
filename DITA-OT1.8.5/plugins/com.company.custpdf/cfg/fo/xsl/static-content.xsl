@@ -257,16 +257,22 @@ See the accompanying license.txt file for applicable licenses.
                 <xsl:call-template name="insertVariable">
                     <xsl:with-param name="theVariableID" select="'Body odd footer'"/>
                     <xsl:with-param name="theParameters">
-                        <heading>
+                        <!--<heading>
                             <fo:inline xsl:use-attribute-sets="__body__odd__footer__heading">
                                 <fo:retrieve-marker retrieve-class-name="current-header"/>
                             </fo:inline>
-                        </heading>
+                        </heading>-->
                         <pagenum>
                             <fo:inline xsl:use-attribute-sets="__body__odd__footer__pagenum">
                                 <fo:page-number/>
                             </fo:inline>
                         </pagenum>
+                        <pubdate>
+                            <xsl:value-of select="$pubDate"/>
+                        </pubdate>
+                        <copyright>
+                            <xsl:value-of select="$copyYear"/>
+                        </copyright>
                     </xsl:with-param>
                 </xsl:call-template>
             </fo:block>
@@ -281,16 +287,22 @@ See the accompanying license.txt file for applicable licenses.
                 <xsl:call-template name="insertVariable">
                     <xsl:with-param name="theVariableID" select="'Body even footer'"/>
                     <xsl:with-param name="theParameters">
-                        <heading>
+                        <!--<heading>
                             <fo:inline xsl:use-attribute-sets="__body__even__footer__heading">
                                 <fo:retrieve-marker retrieve-class-name="current-header"/>
                             </fo:inline>
-                        </heading>
+                        </heading>-->
                         <pagenum>
                             <fo:inline xsl:use-attribute-sets="__body__even__footer__pagenum">
                                 <fo:page-number/>
                             </fo:inline>
                         </pagenum>
+                        <pubdate>
+                            <xsl:value-of select="$pubDate"/>
+                        </pubdate>
+                        <copyright>
+                            <xsl:value-of select="$copyYear"/>
+                        </copyright>
                     </xsl:with-param>
                 </xsl:call-template>
             </fo:block>
@@ -384,6 +396,12 @@ See the accompanying license.txt file for applicable licenses.
                                 <fo:page-number/>
                             </fo:inline>
                         </pagenum>
+                        <pubdate>
+                            <xsl:value-of select="$pubDate"/>
+                        </pubdate>
+                        <copyright>
+                            <xsl:value-of select="$copyYear"/>
+                        </copyright>
                     </xsl:with-param>
                 </xsl:call-template>
             </fo:block>
@@ -462,6 +480,12 @@ See the accompanying license.txt file for applicable licenses.
                                 <fo:page-number/>
                             </fo:inline>
                         </pagenum>
+                        <pubdate>
+                            <xsl:value-of select="$pubDate"/>
+                        </pubdate>
+                        <copyright>
+                            <xsl:value-of select="$copyYear"/>
+                        </copyright>
                     </xsl:with-param>
                 </xsl:call-template>
             </fo:block>
