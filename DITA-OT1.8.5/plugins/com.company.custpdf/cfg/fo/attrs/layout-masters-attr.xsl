@@ -16,6 +16,15 @@
     </xsl:attribute>
   </xsl:attribute-set>
   
+ <xsl:attribute-set name="landscape-page-master">
+  <xsl:attribute name="page-width">
+    <xsl:value-of select="$page-width-landscape"/>
+  </xsl:attribute>
+  <xsl:attribute name="page-height">
+    <xsl:value-of select="$page-height-landscape"/>
+  </xsl:attribute>
+  </xsl:attribute-set>
+  
   <!-- legacy attribute set -->
   <xsl:attribute-set name="region-body" use-attribute-sets="region-body.odd"/>
   
@@ -73,6 +82,21 @@
     </xsl:attribute>
     <xsl:attribute name="{if ($writing-mode = 'lr') then 'margin-right' else 'margin-left'}">
       <xsl:value-of select="$page-margin-inside"/>
+    </xsl:attribute>
+  </xsl:attribute-set>
+  
+  <xsl:attribute-set name="region-body.landscape">
+    <xsl:attribute name="margin-top">
+      <xsl:value-of select="$page-margin-landscape"/>
+    </xsl:attribute>
+    <xsl:attribute name="margin-bottom">
+      <xsl:value-of select="$page-margin-landscape"/>
+    </xsl:attribute>
+    <xsl:attribute name="{if ($writing-mode = 'lr') then 'margin-left' else 'margin-right'}">
+      <xsl:value-of select="$page-margin-landscape"/>
+    </xsl:attribute>
+    <xsl:attribute name="{if ($writing-mode = 'lr') then 'margin-right' else 'margin-left'}">
+      <xsl:value-of select="$page-margin-landscape"/>
     </xsl:attribute>
   </xsl:attribute-set>
   

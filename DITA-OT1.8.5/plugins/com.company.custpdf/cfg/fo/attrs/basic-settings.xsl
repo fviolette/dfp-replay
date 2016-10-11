@@ -39,6 +39,8 @@
     <!-- The default of 215.9mm x 279.4mm is US Letter size (8.5x11in) -->
     <xsl:variable name="page-width">8.5in</xsl:variable>
     <xsl:variable name="page-height">11in</xsl:variable>
+    <xsl:variable name="page-width-landscape">11in</xsl:variable>
+    <xsl:variable name="page-height-landscape">8.5in</xsl:variable>
 
     <!-- This is the default, but you can set the margins individually below. -->
     <xsl:variable name="page-margins">1in</xsl:variable>
@@ -62,4 +64,5 @@
 
     <xsl:variable name="default-font-size">10pt</xsl:variable>
     <xsl:variable name="default-line-height">12pt</xsl:variable>
+    <xsl:variable name="page-margin-landscape">5in</xsl:variable>
 </xsl:stylesheet>

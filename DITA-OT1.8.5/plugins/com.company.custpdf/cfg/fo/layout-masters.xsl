@@ -119,6 +119,18 @@ See the accompanying license.txt file for applicable licenses.
                 <fo:region-before region-name="last-body-header" xsl:use-attribute-sets="region-before"/>
                 <fo:region-after region-name="last-body-footer" xsl:use-attribute-sets="region-after"/>
             </fo:simple-page-master>
+          
+            <fo:simple-page-master master-name="landscape-odd" xsl:use-attribute-sets="landscape-page-master">
+              <fo:region-body xsl:use-attribute-sets="region-body.landscape"/>
+              <fo:region-before region-name="last-body-header" xsl:use-attribute-sets="region-before"/>
+              <fo:region-after region-name="last-body-footer" xsl:use-attribute-sets="region-after"/>
+            </fo:simple-page-master>
+          
+          <fo:simple-page-master master-name="landscape-even" xsl:use-attribute-sets="landscape-page-master">
+            <fo:region-body xsl:use-attribute-sets="region-body.landscape"/>
+            <fo:region-before region-name="last-body-header" xsl:use-attribute-sets="region-before"/>
+            <fo:region-after region-name="last-body-footer" xsl:use-attribute-sets="region-after"/>
+          </fo:simple-page-master>
 
             <!--INDEX simple masters-->
             <fo:simple-page-master master-name="index-first" xsl:use-attribute-sets="simple-page-master">
@@ -170,7 +182,9 @@ See the accompanying license.txt file for applicable licenses.
           </xsl:call-template>
           <xsl:call-template name="generate-page-sequence-master">
             <xsl:with-param name="master-name" select="'body-sequence'"/>
-            <xsl:with-param name="master-reference" select="'body'"/>
+            <xsl:with-param name="master-reference" select="'landscape'"/>
+            <xsl:with-param name="first" select="false()"/>
+            <xsl:with-param name="last" select="false()"/>
           </xsl:call-template>
           <xsl:call-template name="generate-page-sequence-master">
             <xsl:with-param name="master-name" select="'ditamap-body-sequence'"/>
@@ -190,6 +204,12 @@ See the accompanying license.txt file for applicable licenses.
           <xsl:call-template name="generate-page-sequence-master">
             <xsl:with-param name="master-name" select="'glossary-sequence'"/>
             <xsl:with-param name="master-reference" select="'glossary'"/>
+            <xsl:with-param name="last" select="false()"/>
+          </xsl:call-template>
+          <xsl:call-template name="generate-page-sequence-master">
+            <xsl:with-param name="master-name" select="'landscape-sequence'"/>
+            <xsl:with-param name="master-reference" select="'landscape'"/>
+            <xsl:with-param name="first" select="false()"/>
             <xsl:with-param name="last" select="false()"/>
           </xsl:call-template>
         </fo:layout-master-set>
