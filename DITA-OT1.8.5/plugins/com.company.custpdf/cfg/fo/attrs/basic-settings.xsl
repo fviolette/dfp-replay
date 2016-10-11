@@ -52,7 +52,7 @@
     <!--The side column width is the amount the body text is indented relative to the margin. -->
     <xsl:variable name="side-col-width">25pt</xsl:variable>
 
-    <xsl:variable name="mirror-page-margins" select="false()"/>
+    <xsl:variable name="mirror-page-margins" select="true()"/>
 
     <xsl:variable name="default-font-size">10pt</xsl:variable>
     <xsl:variable name="default-line-height">12pt</xsl:variable>
