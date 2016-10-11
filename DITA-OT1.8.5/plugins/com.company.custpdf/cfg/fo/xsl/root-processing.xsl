@@ -266,5 +266,8 @@ See the accompanying license.txt file for applicable licenses.
 
         </fo:root>
     </xsl:template>
+  
+  <xsl:variable name="currentDate"
+    select="format-dateTime(current-dateTime(),'[M0l]/[D0l]/[Y000l]')"/>
 
 </xsl:stylesheet>

@@ -65,7 +65,7 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Body odd header"><param ref-name="heading"/></variable>
 
     <!-- The header that appears on even-numbered pages. -->
-    <variable id="Body even header"><param ref-name="title"/></variable>
+     <variable id="Body even header"><param ref-name="title"/>&#xA0;<param ref-name="currentdate"/></variable>
 
     <!-- The footer that appears on Preface odd-numbered pages. -->
     <variable id="Preface odd footer"/>

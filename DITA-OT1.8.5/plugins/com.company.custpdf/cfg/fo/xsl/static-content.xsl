@@ -155,6 +155,11 @@ See the accompanying license.txt file for applicable licenses.
                         <title>
                             <xsl:value-of select="$bookTitle"/>
                         </title>
+                        <currentdate>
+                            <xsl:text>(</xsl:text>
+                            <xsl:value-of select="$currentDate"/>
+                            <xsl:text>)</xsl:text>
+                        </currentdate>
                         <!--<prodname>
                             <xsl:value-of select="$productName"/>
                         </prodname>
