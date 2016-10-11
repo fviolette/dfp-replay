@@ -47,7 +47,7 @@ See the accompanying license.txt file for applicable licenses.
     -->
 
     <!-- Product name to be placed inside headers etc. -->
-    <variable id="Product Name"/>
+    <variable id="Product Name">Product Name</variable>
 
     <!-- The footer that appears on odd-numbered pages. -->
     <variable id="Body odd footer"/>
@@ -422,4 +422,6 @@ See the accompanying license.txt file for applicable licenses.
   <variable id="#menucascade-separator">&#xA0;&#x3E; </variable>
   <variable id="#quote-start">“</variable>
   <variable id="#quote-end">”</variable>
+  <variable id="Book Title">Book Title</variable>
+  <variable id="Copy Year">Copy Year</variable>
 </vars>
