@@ -137,7 +137,7 @@ See the accompanying license.txt file for applicable licenses.
                         </pagenum>-->
                     </xsl:with-param>
                 </xsl:call-template>
-                <fo:inline>
+                <fo:inline xsl:use-attribute-sets="__header__image">
                     <fo:external-graphic src="url(Customization/OpenTopic/common/artwork/logo.png)"/>
                 </fo:inline>
             </fo:block>

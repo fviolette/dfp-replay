@@ -276,5 +276,9 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute-set name="__hdrftr__leader">
       <xsl:attribute name="leader-pattern">space</xsl:attribute>
     </xsl:attribute-set>
+  
+    <xsl:attribute-set name="__header__image">
+      <xsl:attribute name="padding-left">10pt</xsl:attribute>
+    </xsl:attribute-set>
     
 </xsl:stylesheet>
