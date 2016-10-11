@@ -268,9 +268,11 @@ See the accompanying license.txt file for applicable licenses.
                         </pagenum>
                         <pubdate>
                             <xsl:value-of select="$pubDate"/>
+                            <fo:leader xsl:use-attribute-sets="__hdrftr__leader"></fo:leader>
                         </pubdate>
                         <copyright>
                             <xsl:value-of select="$copyYear"/>
+                            <fo:leader xsl:use-attribute-sets="__hdrftr__leader"></fo:leader>
                         </copyright>
                     </xsl:with-param>
                 </xsl:call-template>

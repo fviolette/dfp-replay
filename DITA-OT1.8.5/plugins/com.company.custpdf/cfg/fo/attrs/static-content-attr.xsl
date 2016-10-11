@@ -74,7 +74,8 @@ See the accompanying license.txt file for applicable licenses.
   </xsl:attribute-set>
 
   <xsl:attribute-set name="odd__footer">
-    <xsl:attribute name="text-align">end</xsl:attribute>
+    <xsl:attribute name="text-align">justify</xsl:attribute>
+    <xsl:attribute name="text-align-last">justify</xsl:attribute>
     <xsl:attribute name="end-indent">10pt</xsl:attribute>
     <xsl:attribute name="space-after">10pt</xsl:attribute>
     <xsl:attribute name="space-after.conditionality">retain</xsl:attribute>
@@ -271,5 +272,9 @@ See the accompanying license.txt file for applicable licenses.
 
     <xsl:attribute-set name="__glossary__even__header__pagenum" use-attribute-sets="pagenum">
     </xsl:attribute-set>
-
+    
+    <xsl:attribute-set name="__hdrftr__leader">
+      <xsl:attribute name="leader-pattern">space</xsl:attribute>
+    </xsl:attribute-set>
+    
 </xsl:stylesheet>
