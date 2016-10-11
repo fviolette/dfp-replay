@@ -96,7 +96,7 @@ See the accompanying license.txt file for applicable licenses.
             <!--BODY simple masters-->
             <fo:simple-page-master master-name="body-first" xsl:use-attribute-sets="simple-page-master">
                 <fo:region-body xsl:use-attribute-sets="region-body.odd"/>
-                <fo:region-before region-name="first-body-header" xsl:use-attribute-sets="region-before"/>
+                <fo:region-before region-name="first-body-header" xsl:use-attribute-sets="region-body.first region-before.first"/>
                 <fo:region-after region-name="first-body-footer" xsl:use-attribute-sets="region-after"/>
             </fo:simple-page-master>
 
@@ -109,7 +109,7 @@ See the accompanying license.txt file for applicable licenses.
             </xsl:if>
 
             <fo:simple-page-master master-name="body-odd" xsl:use-attribute-sets="simple-page-master">
-                <fo:region-body xsl:use-attribute-sets="region-body.odd"/>
+                <fo:region-body xsl:use-attribute-sets="region-body.first"/>
                 <fo:region-before region-name="odd-body-header" xsl:use-attribute-sets="region-before"/>
                 <fo:region-after region-name="odd-body-footer" xsl:use-attribute-sets="region-after"/>
             </fo:simple-page-master>

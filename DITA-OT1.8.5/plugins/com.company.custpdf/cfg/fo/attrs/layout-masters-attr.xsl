@@ -19,6 +19,29 @@
   <!-- legacy attribute set -->
   <xsl:attribute-set name="region-body" use-attribute-sets="region-body.odd"/>
   
+  <xsl:attribute-set name="region-before.first">
+    <xsl:attribute name="extent">
+      <xsl:value-of select="$header-extent-first"/>
+    </xsl:attribute>
+    <xsl:attribute name="display-align">before</xsl:attribute>
+  </xsl:attribute-set>
+  
+  <xsl:attribute-set name="region-body.first">
+    <xsl:attribute name="margin-top">
+      <xsl:value-of select="$page-margin-top-first"/>
+    </xsl:attribute>
+    <xsl:attribute name="margin-bottom">
+      <xsl:value-of select="$page-margin-bottom"/>
+    </xsl:attribute>
+    <xsl:attribute name="{if ($writing-mode = 'lr') then 'margin-left' else 'margin-right'}">
+      <xsl:value-of select="$page-margin-inside"/>
+    </xsl:attribute>
+    <xsl:attribute name="{if ($writing-mode = 'lr') then 'margin-right' else 'margin-left'}">
+      <xsl:value-of select="$page-margin-outside"/>
+    </xsl:attribute>
+    <xsl:attribute name="background-color">#ffffc0</xsl:attribute>
+  </xsl:attribute-set>
+  
   <xsl:attribute-set name="region-body.odd">
     <xsl:attribute name="margin-top">
       <xsl:value-of select="$body-margin"/>
