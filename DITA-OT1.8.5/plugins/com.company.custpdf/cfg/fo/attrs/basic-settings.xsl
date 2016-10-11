@@ -37,8 +37,8 @@
     <xsl:param name="includeRelatedLinkRoles" select="concat(' ', normalize-space($include.rellinks), ' ')"/>
 
     <!-- The default of 215.9mm x 279.4mm is US Letter size (8.5x11in) -->
-    <xsl:variable name="page-width">215.9mm</xsl:variable>
-    <xsl:variable name="page-height">279.4mm</xsl:variable>
+    <xsl:variable name="page-width">8.5in</xsl:variable>
+    <xsl:variable name="page-height">11in</xsl:variable>
 
     <!-- This is the default, but you can set the margins individually below. -->
     <xsl:variable name="page-margins">20mm</xsl:variable>
