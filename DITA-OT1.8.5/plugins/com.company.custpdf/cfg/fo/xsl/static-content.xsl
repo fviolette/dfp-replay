@@ -127,7 +127,7 @@ See the accompanying license.txt file for applicable licenses.
                         </prodname>-->
                         <heading>
                             <fo:inline xsl:use-attribute-sets="__body__odd__header__heading">
-                                <fo:retrieve-marker retrieve-class-name="current-header"/>
+                                <fo:retrieve-marker retrieve-class-name="current-h2"/>
                             </fo:inline>
                         </heading>
                         <!--<pagenum>

@@ -56,6 +56,10 @@
 <topicref href="taskbook/maintainstorage.dita"></topicref>
 <topicref href="taskbook/maintainserver.dita"></topicref>
 <topicref href="taskbook/maintaindatabase.dita"></topicref>
+<!-- mock to test -->
+<topicref href="taskbook/maintainstorage.dita"></topicref>
+<topicref href="taskbook/maintainserver.dita"></topicref>
+<topicref href="taskbook/maintaindatabase.dita"></topicref>
 </chapter>
 <chapter href="taskbook/troubleshooting.dita">
 <topicref href="taskbook/drivetrouble.dita"></topicref>
