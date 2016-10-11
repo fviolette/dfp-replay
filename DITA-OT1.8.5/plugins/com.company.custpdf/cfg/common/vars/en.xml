@@ -65,7 +65,7 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Body odd header"><param ref-name="heading"/></variable>
 
     <!-- The header that appears on even-numbered pages. -->
-    <variable id="Body even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="prodname"/></variable>
+    <variable id="Body even header"><param ref-name="title"/></variable>
 
     <!-- The footer that appears on Preface odd-numbered pages. -->
     <variable id="Preface odd footer"/>
@@ -99,7 +99,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <!-- The header that appears on the odd-numbered table of contents
          pages. --> 
-    <variable id="Toc even header">Table of Contents</variable>
+     <variable id="Toc even header"><param ref-name="title"/></variable>
 
     <!-- The footer that appears on the odd-numbered index pages. -->
     <variable id="Index odd footer"/>
@@ -111,7 +111,7 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Index odd header">Index</variable>
 
     <!-- The header that appears on the even-numbered index pages. -->
-    <variable id="Index even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="prodname"/></variable>
+     <variable id="Index even header"><param ref-name="title"/></variable>
 
     <!-- The formatting used to display ordered lists (e.g., "1., 2." or 
          "1), 2)" -->
@@ -422,6 +422,6 @@ See the accompanying license.txt file for applicable licenses.
   <variable id="#menucascade-separator">&#xA0;&#x3E; </variable>
   <variable id="#quote-start">“</variable>
   <variable id="#quote-end">”</variable>
-  <variable id="Book Title">Book Title</variable>
+  <variable id="Book Title">Valid Test - Book Title</variable>
   <variable id="Copy Year">Copy Year</variable>
 </vars>

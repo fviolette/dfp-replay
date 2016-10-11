@@ -151,7 +151,10 @@ See the accompanying license.txt file for applicable licenses.
                 <xsl:call-template name="insertVariable">
                     <xsl:with-param name="theVariableID" select="'Body even header'"/>
                     <xsl:with-param name="theParameters">
-                        <prodname>
+                        <title>
+                            <xsl:value-of select="$bookTitle"/>
+                        </title>
+                        <!--<prodname>
                             <xsl:value-of select="$productName"/>
                         </prodname>
                         <heading>
@@ -163,7 +166,7 @@ See the accompanying license.txt file for applicable licenses.
                             <fo:inline xsl:use-attribute-sets="__body__even__header__pagenum">
                                 <fo:page-number/>
                             </fo:inline>
-                        </pagenum>
+                        </pagenum>-->
                     </xsl:with-param>
                 </xsl:call-template>
             </fo:block>
@@ -325,8 +328,11 @@ See the accompanying license.txt file for applicable licenses.
             <fo:block xsl:use-attribute-sets="__toc__even__header">
                 <xsl:call-template name="insertVariable">
                     <xsl:with-param name="theVariableID" select="'Toc even header'"/>
-                    <!--<xsl:with-param name="theParameters">
-                        <prodname>
+                    <xsl:with-param name="theParameters">
+                        <title>
+                            <xsl:value-of select="$bookTitle"/>
+                        </title>
+                        <!--<prodname>
                             <xsl:value-of select="$productName"/>
                         </prodname>
                         <heading>
@@ -338,8 +344,8 @@ See the accompanying license.txt file for applicable licenses.
                             <fo:inline xsl:use-attribute-sets="__toc__even__header__pagenum">
                                 <fo:page-number/>
                             </fo:inline>
-                        </pagenum>
-                    </xsl:with-param>-->
+                        </pagenum>-->
+                    </xsl:with-param>
                 </xsl:call-template>
                 <fo:inline>
                     <fo:external-graphic src="url(Customization/OpenTopic/common/artwork/logo.png)"/>
@@ -422,7 +428,10 @@ See the accompanying license.txt file for applicable licenses.
                 <xsl:call-template name="insertVariable">
                     <xsl:with-param name="theVariableID" select="'Index even header'"/>
                     <xsl:with-param name="theParameters">
-                        <prodname>
+                        <title>
+                            <xsl:value-of select="$bookTitle"/>
+                        </title>
+                        <!--<prodname>
                             <xsl:value-of select="$productName"/>
                         </prodname>
                         <heading>
@@ -434,7 +443,7 @@ See the accompanying license.txt file for applicable licenses.
                             <fo:inline xsl:use-attribute-sets="__index__even__header__pagenum">
                                 <fo:page-number/>
                             </fo:inline>
-                        </pagenum>
+                        </pagenum>-->
                     </xsl:with-param>
                 </xsl:call-template>
             </fo:block>
