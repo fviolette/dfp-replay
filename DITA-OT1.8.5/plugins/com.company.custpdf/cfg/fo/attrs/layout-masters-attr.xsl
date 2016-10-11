@@ -88,6 +88,9 @@
       <xsl:value-of select="$page-margin-outside-front"/>
     </xsl:attribute>
     <xsl:attribute name="background-color">#ffc0ff</xsl:attribute>
+    <xsl:attribute name="background-image">url(Customization/OpenTopic/common/artwork/dita-logo.jpg)</xsl:attribute>
+    <xsl:attribute name="background-repeat">no-repeat</xsl:attribute>
+    <xsl:attribute name="background-position">100px 100px</xsl:attribute>
   </xsl:attribute-set>
   
   <xsl:attribute-set name="region-body__frontmatter.even" use-attribute-sets="region-body.even">
