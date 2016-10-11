@@ -60,6 +60,7 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:if test="$mirror-page-margins">
           <xsl:call-template name="insertTocEvenHeader"/>
         </xsl:if>
+        <xsl:call-template name="insertTocFirstHeader"/>
     </xsl:template>
 
     <xsl:template name="insertIndexStaticContents">
@@ -917,5 +918,14 @@ See the accompanying license.txt file for applicable licenses.
 
     </xsl:template>
 
+    <xsl:template name="insertTocFirstHeader">
+        <fo:static-content flow-name="first-toc-header">
+            <fo:block xsl:use-attribute-sets="__toc__odd__header">
+                <fo:inline>
+                    <fo:external-graphic src="url(Customization/OpenTopic/common/artwork/header.jpg)"></fo:external-graphic>
+                </fo:inline>
+            </fo:block>
+        </fo:static-content>
+    </xsl:template>
 
 </xsl:stylesheet>

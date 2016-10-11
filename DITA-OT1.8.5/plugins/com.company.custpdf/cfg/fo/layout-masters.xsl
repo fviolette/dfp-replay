@@ -89,7 +89,7 @@ See the accompanying license.txt file for applicable licenses.
 
             <fo:simple-page-master master-name="toc-first" xsl:use-attribute-sets="simple-page-master">
                 <fo:region-body xsl:use-attribute-sets="region-body.odd"/>
-                <fo:region-before region-name="odd-toc-header" xsl:use-attribute-sets="region-before"/>
+                <fo:region-before region-name="first-toc-header" xsl:use-attribute-sets="region-before"/>
                 <fo:region-after region-name="odd-toc-footer" xsl:use-attribute-sets="region-after"/>
             </fo:simple-page-master>
 
