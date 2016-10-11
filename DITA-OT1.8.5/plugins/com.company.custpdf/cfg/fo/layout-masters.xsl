@@ -175,8 +175,8 @@ See the accompanying license.txt file for applicable licenses.
           <xsl:call-template name="generate-page-sequence-master">
             <xsl:with-param name="master-name" select="'ditamap-body-sequence'"/>
             <xsl:with-param name="master-reference" select="'body'"/>
-            <xsl:with-param name="first" select="false()"/>
-            <xsl:with-param name="last" select="false()"/>
+            <xsl:with-param name="first" select="true()"/>
+            <xsl:with-param name="last" select="true()"/>
           </xsl:call-template>
           <xsl:call-template name="generate-page-sequence-master">
             <xsl:with-param name="master-name" select="'index-sequence'"/>

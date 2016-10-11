@@ -663,7 +663,7 @@ See the accompanying license.txt file for applicable licenses.
                     <xsl:value-of select="'auto'"/>
                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="'auto'"/>
+                    <xsl:value-of select="'even'"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:attribute>
