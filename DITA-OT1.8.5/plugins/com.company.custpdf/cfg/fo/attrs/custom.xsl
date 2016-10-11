@@ -7,4 +7,5 @@
     <xsl:import href="front-matter-attr.xsl"/>
     <xsl:import href="layout-masters-attr.xsl"/>
     <xsl:import href="hi-domain-attr.xsl"/>
+    <xsl:import href="static-content-attr.xsl"/>
 </xsl:stylesheet>

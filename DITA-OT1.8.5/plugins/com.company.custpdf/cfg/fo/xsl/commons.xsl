@@ -148,11 +148,25 @@ See the accompanying license.txt file for applicable licenses.
             <xsl:when test="$topicType = 'topicSimple'">
                 <xsl:variable name="page-sequence-reference">
                     <xsl:choose>
-                        <xsl:when test="$mapType = 'bookmap'">
-                            <xsl:value-of select="'body-sequence'"/>
+                        <xsl:when test="@outputclass='landscape'">
+                            <xsl:choose>
+                                <xsl:when test="$mapType = 'bookmap'">
+                                    <xsl:value-of select="'landscape-sequence'"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="'landscape-sequence'"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="'ditamap-body-sequence'"/>
+                            <xsl:choose>
+                                <xsl:when test="$mapType = 'bookmap'">
+                                    <xsl:value-of select="'body-sequence'"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="'ditamap-body-sequence'"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:variable>
@@ -191,7 +205,31 @@ See the accompanying license.txt file for applicable licenses.
 
     <!--  Bookmap Chapter processing  -->
     <xsl:template name="processTopicChapter">
-        <fo:page-sequence master-reference="body-sequence" xsl:use-attribute-sets="__force__page__count">
+        <xsl:variable name="page-sequence-reference">
+            <xsl:choose>
+                <xsl:when test="@outputclass = 'landscape'">
+                    <xsl:choose>
+                        <xsl:when test="$mapType = 'bookmap'">
+                            <xsl:value-of select="'landscape-sequence'"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="'landscape-sequence'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:choose>
+                        <xsl:when test="$mapType = 'bookmap'">
+                            <xsl:value-of select="'body-sequence'"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="'ditamap-body-sequence'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <fo:page-sequence master-reference="{$page-sequence-reference}" xsl:use-attribute-sets="__force__page__count">
             <xsl:call-template name="startPageNumbering"/>
             <xsl:call-template name="insertBodyStaticContents"/>
             <fo:flow flow-name="xsl-region-body">
@@ -244,7 +282,31 @@ See the accompanying license.txt file for applicable licenses.
 
     <!--  Bookmap Appendix processing  -->
     <xsl:template name="processTopicAppendix">
-        <fo:page-sequence master-reference="body-sequence" xsl:use-attribute-sets="__force__page__count">
+        <xsl:variable name="page-sequence-reference">
+            <xsl:choose>
+                <xsl:when test="@outputclass='landscape'">
+                    <xsl:choose>
+                        <xsl:when test="$mapType = 'bookmap'">
+                            <xsl:value-of select="'landscape-sequence'"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="'landscape-sequence'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:choose>
+                        <xsl:when test="$mapType = 'bookmap'">
+                            <xsl:value-of select="'body-sequence'"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="'ditamap-body-sequence'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <fo:page-sequence master-reference="{$page-sequence-reference}" xsl:use-attribute-sets="__force__page__count">
             <xsl:call-template name="startPageNumbering"/>
             <xsl:call-template name="insertBodyStaticContents"/>
             <fo:flow flow-name="xsl-region-body">
@@ -300,7 +362,31 @@ See the accompanying license.txt file for applicable licenses.
 
   <!--  Bookmap appendices processing  -->
   <xsl:template name="processTopicAppendices">
-    <fo:page-sequence master-reference="body-sequence" xsl:use-attribute-sets="__force__page__count">
+      <xsl:variable name="page-sequence-reference">
+          <xsl:choose>
+              <xsl:when test="@outputclass='landscape'">
+                  <xsl:choose>
+                      <xsl:when test="$mapType = 'bookmap'">
+                          <xsl:value-of select="'landscape-sequence'"/>
+                      </xsl:when>
+                      <xsl:otherwise>
+                          <xsl:value-of select="'landscape-sequence'"/>
+                      </xsl:otherwise>
+                  </xsl:choose>
+              </xsl:when>
+              <xsl:otherwise>
+                  <xsl:choose>
+                      <xsl:when test="$mapType = 'bookmap'">
+                          <xsl:value-of select="'body-sequence'"/>
+                      </xsl:when>
+                      <xsl:otherwise>
+                          <xsl:value-of select="'ditamap-body-sequence'"/>
+                      </xsl:otherwise>
+                  </xsl:choose>
+              </xsl:otherwise>
+          </xsl:choose>
+      </xsl:variable>
+    <fo:page-sequence master-reference="{$page-sequence-reference}" xsl:use-attribute-sets="__force__page__count">
       <xsl:call-template name="startPageNumbering"/>
       <xsl:call-template name="insertBodyStaticContents"/>
       <fo:flow flow-name="xsl-region-body">
@@ -365,7 +451,31 @@ See the accompanying license.txt file for applicable licenses.
 
     <!--  Bookmap Part processing  -->
     <xsl:template name="processTopicPart">
-        <fo:page-sequence master-reference="body-sequence" xsl:use-attribute-sets="__force__page__count">
+        <xsl:variable name="page-sequence-reference">
+            <xsl:choose>
+                <xsl:when test="@outputclass='landscape'">
+                    <xsl:choose>
+                        <xsl:when test="$mapType = 'bookmap'">
+                            <xsl:value-of select="'landscape-sequence'"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="'landscape-sequence'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:choose>
+                        <xsl:when test="$mapType = 'bookmap'">
+                            <xsl:value-of select="'body-sequence'"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="'ditamap-body-sequence'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <fo:page-sequence master-reference="{$page-sequence-reference}" xsl:use-attribute-sets="__force__page__count">
             <xsl:call-template name="startPageNumbering"/>
             <xsl:call-template name="insertBodyStaticContents"/>
             <fo:flow flow-name="xsl-region-body">
@@ -431,7 +541,31 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:template>
 
     <xsl:template name="processTopicNotices">
-        <fo:page-sequence master-reference="body-sequence" xsl:use-attribute-sets="__force__page__count">
+        <xsl:variable name="page-sequence-reference">
+            <xsl:choose>
+                <xsl:when test="@outputclass='landscape'">
+                    <xsl:choose>
+                        <xsl:when test="$mapType = 'bookmap'">
+                            <xsl:value-of select="'landscape-sequence'"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="'landscape-sequence'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:choose>
+                        <xsl:when test="$mapType = 'bookmap'">
+                            <xsl:value-of select="'body-sequence'"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="'ditamap-body-sequence'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <fo:page-sequence master-reference="{$page-sequence-reference}" xsl:use-attribute-sets="__force__page__count">
             <xsl:call-template name="startPageNumbering"/>
             <xsl:call-template name="insertBodyStaticContents"/>
             <fo:flow flow-name="xsl-region-body">
@@ -2239,11 +2373,25 @@ See the accompanying license.txt file for applicable licenses.
                     <xsl:when test="not(ancestor::*[contains(@class,' topic/topic ')])">
                         <xsl:variable name="page-sequence-reference">
                             <xsl:choose>
-                                <xsl:when test="$mapType = 'bookmap'">
-                                    <xsl:value-of select="'body-sequence'"/>
+                                <xsl:when test="@outputclass='landscape'">
+                                    <xsl:choose>
+                                        <xsl:when test="$mapType = 'bookmap'">
+                                            <xsl:value-of select="'landscape-sequence'"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:value-of select="'landscape-sequence'"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:value-of select="'ditamap-body-sequence'"/>
+                                    <xsl:choose>
+                                        <xsl:when test="$mapType = 'bookmap'">
+                                            <xsl:value-of select="'body-sequence'"/>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:value-of select="'ditamap-body-sequence'"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                                 </xsl:otherwise>
                             </xsl:choose>
                         </xsl:variable>
