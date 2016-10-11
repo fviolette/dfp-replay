@@ -172,9 +172,9 @@ See the accompanying license.txt file for applicable licenses.
 
         <fo:static-content flow-name="first-body-header">
             <fo:block xsl:use-attribute-sets="__body__first__header">
-<!--                <xsl:call-template name="insertVariable">
+               <xsl:call-template name="insertVariable">
                     <xsl:with-param name="theVariableID" select="'Body first header'"/>
-                    <xsl:with-param name="theParameters">
+                   <!--<xsl:with-param name="theParameters">
                         <prodname>
                           <xsl:value-of select="$productName"/>
                         </prodname>
@@ -188,8 +188,8 @@ See the accompanying license.txt file for applicable licenses.
                                 <fo:page-number/>
                             </fo:inline>
                         </pagenum>
-                    </xsl:with-param>
-                </xsl:call-template>-->
+                    </xsl:with-param>-->
+                </xsl:call-template>
                 <fo:inline>
                     <fo:external-graphic src="url(Customization/OpenTopic/common/artwork/header.jpg)"/>
                 </fo:inline>
@@ -315,7 +315,6 @@ See the accompanying license.txt file for applicable licenses.
                 </xsl:call-template>
             </fo:block>
         </fo:static-content>
-
     </xsl:template>
 
     <xsl:template name="insertTocEvenHeader">
@@ -323,7 +322,7 @@ See the accompanying license.txt file for applicable licenses.
             <fo:block xsl:use-attribute-sets="__toc__even__header">
                 <xsl:call-template name="insertVariable">
                     <xsl:with-param name="theVariableID" select="'Toc even header'"/>
-                    <xsl:with-param name="theParameters">
+                    <!--<xsl:with-param name="theParameters">
                         <prodname>
                             <xsl:value-of select="$productName"/>
                         </prodname>
@@ -337,8 +336,11 @@ See the accompanying license.txt file for applicable licenses.
                                 <fo:page-number/>
                             </fo:inline>
                         </pagenum>
-                    </xsl:with-param>
+                    </xsl:with-param>-->
                 </xsl:call-template>
+                <fo:inline>
+                    <fo:external-graphic src="url(Customization/OpenTopic/common/artwork/logo.png)"/>
+                </fo:inline>
             </fo:block>
         </fo:static-content>
 
@@ -385,7 +387,8 @@ See the accompanying license.txt file for applicable licenses.
             <fo:block xsl:use-attribute-sets="__index__odd__header">
                 <xsl:call-template name="insertVariable">
                     <xsl:with-param name="theVariableID" select="'Index odd header'"/>
-                    <xsl:with-param name="theParameters">
+                    <!--
+                        <xsl:with-param name="theParameters">
                         <prodname>
                             <xsl:value-of select="$productName"/>
                         </prodname>
@@ -400,7 +403,11 @@ See the accompanying license.txt file for applicable licenses.
                             </fo:inline>
                         </pagenum>
                     </xsl:with-param>
+                    -->
                 </xsl:call-template>
+                <fo:inline>
+                    <fo:external-graphic src="url(Customization/OpenTopic/common/artwork/logo.jpg)"/>
+                </fo:inline>
             </fo:block>
         </fo:static-content>
 

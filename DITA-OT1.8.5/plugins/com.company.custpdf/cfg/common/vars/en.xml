@@ -95,11 +95,11 @@ See the accompanying license.txt file for applicable licenses.
 
     <!-- The header that appears on the odd-numbered table of contents
          pages. --> 
-    <variable id="Toc odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+     <variable id="Toc odd header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="prodname"/></variable>
 
     <!-- The header that appears on the odd-numbered table of contents
          pages. --> 
-    <variable id="Toc even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="prodname"/></variable>
+    <variable id="Toc even header">Table of Contents</variable>
 
     <!-- The footer that appears on the odd-numbered index pages. -->
     <variable id="Index odd footer"/>
@@ -108,7 +108,7 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Index even footer"/>
 
     <!-- The header that appears on the odd-numbered index pages. -->
-    <variable id="Index odd header"><param ref-name="prodname"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="pagenum"/></variable>
+    <variable id="Index odd header">Index</variable>
 
     <!-- The header that appears on the even-numbered index pages. -->
     <variable id="Index even header"><param ref-name="pagenum"/>&#xA0;|&#xA0;<param ref-name="heading"/>&#xA0;|&#xA0;<param ref-name="prodname"/></variable>
