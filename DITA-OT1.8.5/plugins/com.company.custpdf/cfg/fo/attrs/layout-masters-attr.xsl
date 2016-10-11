@@ -56,6 +56,8 @@
     <xsl:attribute name="{if ($writing-mode = 'lr') then 'margin-right' else 'margin-left'}">
       <xsl:value-of select="$page-margin-outside"/>
     </xsl:attribute>
+    <xsl:attribute name="column-count">2</xsl:attribute>
+    <xsl:attribute name="column-gap">1in</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="region-body.even">
