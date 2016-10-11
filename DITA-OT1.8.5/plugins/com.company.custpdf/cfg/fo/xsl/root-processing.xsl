@@ -89,6 +89,48 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:variable>
 
 	<xsl:variable name="relatedTopicrefs" select="//*[contains(@class, ' map/reltable ')]//*[contains(@class, ' map/topicref ')]"/>
+  <xsl:variable name="productVersion" select="(/*/opentopic:map//*[contains(@class, ' topic/vrm ')]/@version)[1]"/>
+  <xsl:variable name="pubDate" select="(/*/opentopic:map//*[contains(@class,' topic/revised ')]/@golive)[1]"/>
+  
+  <xsl:variable name="bookTitle">
+    <xsl:choose>
+      <xsl:when test="$map//*[contains(@class,' bookmap/mainbooktitle ')][1]">
+        <xsl:value-of>
+          <xsl:apply-templates select="$map//*[contains(@class,' bookmap/mainbooktitle ')][1]" mode="dita-ot:text-only"/>
+        </xsl:value-of>
+      </xsl:when>
+      <xsl:when test="$map/*[contains(@class,' topic/title ')][1]">
+        <xsl:value-of>
+          <xsl:apply-templates select="$map/*[contains(@class,' topic/title ')][1]" mode="dita-ot:text-only"/>
+        </xsl:value-of>
+      </xsl:when>
+      <xsl:when test="//*[contains(@class, ' map/map ')]/@title">
+        <xsl:value-of select="//*[contains(@class, ' map/map ')]/@title"/>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="insertVariable">
+          <xsl:with-param name="theVariableID" select="'Book Title'"/>
+        </xsl:call-template>
+      </xsl:otherwise>
+    </xsl:choose>
+  </xsl:variable>
+  
+  <xsl:variable name="copyYear">
+    <xsl:choose> 
+      <xsl:when test="$map//*[contains(@class,' topic/data bookmap/copyrfirst ')]//*[contains(@class, ' topic/ph bookmap/year ')]">
+        <xsl:apply-templates select="$map//*[contains(@class,' topic/data bookmap/copyrfirst ')]//*[contains(@class, ' topic/ph bookmap/year ')]"/>
+      </xsl:when> 
+      <xsl:when test="$map//*[contains(@class,' topic/copyryear ')]/@year">
+        <xsl:apply-templates select="$map//*[contains(@class,' topic/copyryear ')]/@year"/>
+      </xsl:when> 
+      <xsl:otherwise>
+        <xsl:call-template name="insertVariable">
+          <xsl:with-param name="theVariableID" select="'Copy Year'"/>
+        </xsl:call-template>
+      </xsl:otherwise> 
+    </xsl:choose>
+  </xsl:variable>
+  
 
 <!-- Root template, and topicref validation mooved from topic2fo_shell.xsl to add ability for customizaing   -->
 
