@@ -47,6 +47,12 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute name="margin-right">
       <xsl:value-of select=" $page-margin-outside"/>
      </xsl:attribute>
+    <xsl:attribute name="font-family">sans-serif</xsl:attribute>
+    <xsl:attribute name="font-size">9pt</xsl:attribute>
+    <xsl:attribute name="font-weight">regular</xsl:attribute>
+    <xsl:attribute name="color">#000000</xsl:attribute>
+    <xsl:attribute name="border-bottom">1pt solid black</xsl:attribute>
+    <xsl:attribute name="padding-bottom">6pt</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="even__header">
@@ -60,6 +66,11 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute name="margin-right">
       <xsl:value-of select=" $page-margin-inside"/>
     </xsl:attribute>
+    <xsl:attribute name="font-family">sans-serif</xsl:attribute>
+    <xsl:attribute name="font-size">9pt</xsl:attribute>
+    <xsl:attribute name="font-weight">regular</xsl:attribute>
+    <xsl:attribute name="color">#000000</xsl:attribute>
+    <xsl:attribute name="border-bottom">1pt solid black</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="odd__footer">
@@ -74,6 +85,12 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute name="margin-right">
       <xsl:value-of select=" $page-margin-outside"/>
     </xsl:attribute>
+    <xsl:attribute name="font-family">sans-serif</xsl:attribute>
+    <xsl:attribute name="font-size">9pt</xsl:attribute>
+    <xsl:attribute name="font-weight">regular</xsl:attribute>
+    <xsl:attribute name="color">#000000</xsl:attribute>
+    <xsl:attribute name="border-top">1pt solid black</xsl:attribute>
+    <xsl:attribute name="padding-top">6pt</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="even__footer">
@@ -87,10 +104,16 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute name="margin-right">
       <xsl:value-of select=" $page-margin-inside"/>
     </xsl:attribute>
+    <xsl:attribute name="font-family">sans-serif</xsl:attribute>
+    <xsl:attribute name="font-size">9pt</xsl:attribute>
+    <xsl:attribute name="font-weight">regular</xsl:attribute>
+    <xsl:attribute name="color">#000000</xsl:attribute>
+    <xsl:attribute name="border-top">1pt solid black</xsl:attribute>
   </xsl:attribute-set>
   
   <xsl:attribute-set name="pagenum">
     <xsl:attribute name="font-weight">bold</xsl:attribute>
+    <xsl:attribute name="color">#990033</xsl:attribute>
   </xsl:attribute-set>
 
 
