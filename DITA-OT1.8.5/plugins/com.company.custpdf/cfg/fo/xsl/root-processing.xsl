@@ -131,6 +131,8 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:choose>
   </xsl:variable>
   
+  <xsl:variable name="itemNumber" select="//*[contains(@class, ' bookmap/bookid ')]//*[contains(@class, ' bookmap/booknumber ')]"/>
+  
 
 <!-- Root template, and topicref validation mooved from topic2fo_shell.xsl to add ability for customizaing   -->
 
