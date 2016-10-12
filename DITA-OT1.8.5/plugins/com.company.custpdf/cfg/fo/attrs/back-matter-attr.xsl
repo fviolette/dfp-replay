@@ -49,6 +49,14 @@
         <xsl:attribute name="space-after">3pt</xsl:attribute>
         <xsl:attribute name="text-align">right</xsl:attribute>
     </xsl:attribute-set>
+    
+    <xsl:attribute-set name ="__backmatter__language">
+        <xsl:attribute name="font-family">sans-serif</xsl:attribute>
+        <xsl:attribute name="font-size">9pt</xsl:attribute>
+        <xsl:attribute name="font-weight">normal</xsl:attribute>
+        <xsl:attribute name="space-after">3pt</xsl:attribute>
+        <xsl:attribute name="text-align">right</xsl:attribute>
+    </xsl:attribute-set>
 	
 	<xsl:attribute-set name="__backmatter__logo__container">
         <xsl:attribute name="position">absolute</xsl:attribute>

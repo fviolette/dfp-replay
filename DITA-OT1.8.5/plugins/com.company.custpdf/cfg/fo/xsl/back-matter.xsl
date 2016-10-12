@@ -43,6 +43,26 @@
                     <fo:block xsl:use-attribute-sets="__backmatter__publish">
                         <xsl:text>Published </xsl:text><xsl:value-of select="$pubDate"/>
                     </fo:block>
+                    
+                    <fo:block xsl:use-attribute-sets="__backmatter__language">
+                    <xsl:choose>
+                        <xsl:when test="$printedLang = 'de'">
+                            <xsl:text>Deutsch</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="$printedLang = 'en'">
+                            <xsl:text>English</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="$printedLang = 'es'">
+                            <xsl:text>español</xsl:text>
+                        </xsl:when>
+                        <xsl:when test="$printedLang = 'fr'">
+                            <xsl:text>français</xsl:text>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:text>[Unspecified]</xsl:text>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                    </fo:block>
                 </fo:block-container>
                 </fo:flow>
                 </fo:page-sequence>

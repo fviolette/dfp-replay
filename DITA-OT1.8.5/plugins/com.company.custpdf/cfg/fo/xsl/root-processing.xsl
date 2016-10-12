@@ -133,6 +133,10 @@ See the accompanying license.txt file for applicable licenses.
   
   <xsl:variable name="itemNumber" select="//*[contains(@class, ' bookmap/bookid ')]//*[contains(@class, ' bookmap/booknumber ')]"/>
   
+  <xsl:variable name="printedLang">
+    <xsl:value-of select="//*[contains(@class, ' map/map ')]/@xml:lang"/>
+  </xsl:variable>
+  
 
 <!-- Root template, and topicref validation mooved from topic2fo_shell.xsl to add ability for customizaing   -->
 
