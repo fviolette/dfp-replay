@@ -57,7 +57,12 @@
 <topicref href="taskbook/maintainserver.dita"></topicref>
 <topicref href="taskbook/maintaindatabase.dita"></topicref>
 <!-- mock to test -->
-<topicref href="taskbook/maintainstorage.dita"></topicref>
+<topicref href="taskbook/maintainstorage.dita">
+  <!-- mock to test heading levels -->
+  <topicref href="taskbook/maintainserver.dita">
+    <topicref href="taskbook/maintaindatabase.dita"/>
+  </topicref>
+</topicref>
 <topicref href="taskbook/maintainserver.dita"></topicref>
 <topicref href="taskbook/maintaindatabase.dita"></topicref>
 </chapter>

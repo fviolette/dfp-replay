@@ -58,7 +58,7 @@
     <xsl:variable name="header-extent-first">0in</xsl:variable>
 
     <!--The side column width is the amount the body text is indented relative to the margin. -->
-    <xsl:variable name="side-col-width">25pt</xsl:variable>
+    <xsl:variable name="side-col-width">.5in</xsl:variable>
 
     <xsl:variable name="mirror-page-margins" select="true()"/>
 
