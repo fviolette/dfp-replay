@@ -241,7 +241,7 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Search title">Search title</variable>
 
     <!-- Text to use for chapter titles.-->
-    <variable id="Chapter with number">Chapter <param ref-name="number"/></variable>
+    <variable id="Chapter with number">Valid test - Chapter <param ref-name="number"/></variable>
 
     <!-- Text to use for appendix titles.-->
     <variable id="Appendix with number">Appendix <param ref-name="number"/></variable>
