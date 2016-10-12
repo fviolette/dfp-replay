@@ -40,12 +40,30 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__frontmatter__title" use-attribute-sets="common.title">
-        <xsl:attribute name="space-before">80mm</xsl:attribute>
+        <xsl:attribute name="space-before">24pt</xsl:attribute>
         <xsl:attribute name="space-before.conditionality">retain</xsl:attribute>
-        <xsl:attribute name="font-size">22pt</xsl:attribute>
+        <xsl:attribute name="font-size">36pt</xsl:attribute>
         <xsl:attribute name="font-weight">bold</xsl:attribute>
         <xsl:attribute name="line-height">140%</xsl:attribute>
-        <xsl:attribute name="font-family">BigCorpFont</xsl:attribute>
+        <xsl:attribute name="text-align">left</xsl:attribute>
+        <xsl:attribute name="color">#990033</xsl:attribute>
+    </xsl:attribute-set>
+    
+    <xsl:attribute-set name="__frontmatter__product" use-attribute-sets="common.title">
+        <xsl:attribute name="text-align">right</xsl:attribute>
+    </xsl:attribute-set>
+    
+    <xsl:attribute-set name="__frontmatter__link" use-attribute-sets="common.title">
+        <xsl:attribute name="font-size">12pt</xsl:attribute>
+        <xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="text-align">right</xsl:attribute>
+        <xsl:attribute name="font-family">sans-serif</xsl:attribute>
+    </xsl:attribute-set>
+    
+    <xsl:attribute-set name="__frontmatter__logo" use-attribute-sets="common.title">
+        <xsl:attribute name="font-size">14pt</xsl:attribute>
+        <xsl:attribute name="text-align">left</xsl:attribute>
+        <xsl:attribute name="font-family">sans-serif</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__frontmatter__subtitle" use-attribute-sets="common.title">

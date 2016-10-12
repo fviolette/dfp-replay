@@ -129,8 +129,9 @@ See the accompanying license.txt file for applicable licenses.
             <xsl:call-template name="insertFrontMatterStaticContents"/>
             <fo:flow flow-name="xsl-region-body">
                 <fo:block xsl:use-attribute-sets="__frontmatter">
-                    <fo:block>
-                        <xsl:value-of select="$productName"/><xsl:text> </xsl:text>
+                    <fo:block xsl:use-attribute-sets="__frontmatter__product">
+                        <xsl:value-of select="$productName"/>
+                        <xsl:text> </xsl:text>
                         <xsl:value-of select="$productVersion"/>
                     </fo:block>
                     <!-- set the title -->
@@ -154,11 +155,11 @@ See the accompanying license.txt file for applicable licenses.
                         <xsl:value-of select="$bookTitle"/>
                     </fo:block>
                     
-                    <fo:block>
+                    <fo:block xsl:use-attribute-sets="__frontmatter__logo">
                         <fo:external-graphic src="url(Customization/OpenTopic/common/artwork/logo.png)"></fo:external-graphic>
                     </fo:block>
                     
-                    <fo:block>
+                    <fo:block xsl:use-attribute-sets="__frontmatter__link">
                         <fo:basic-link external-destination="http://xmlpress.net/">http://xmlpress.net/</fo:basic-link>
                     </fo:block>
 
