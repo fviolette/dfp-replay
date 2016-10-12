@@ -60,6 +60,11 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="font-family">sans-serif</xsl:attribute>
     </xsl:attribute-set>
     
+    <xsl:attribute-set name="__frontmatter__logo__container" use-attribute-sets="common.title">
+        <xsl:attribute name="position">absolute</xsl:attribute>
+        <xsl:attribute name="top">8.35in</xsl:attribute>
+    </xsl:attribute-set>
+    
     <xsl:attribute-set name="__frontmatter__logo" use-attribute-sets="common.title">
         <xsl:attribute name="font-size">14pt</xsl:attribute>
         <xsl:attribute name="text-align">left</xsl:attribute>

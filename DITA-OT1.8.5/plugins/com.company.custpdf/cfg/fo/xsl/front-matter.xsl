@@ -155,13 +155,15 @@ See the accompanying license.txt file for applicable licenses.
                         <xsl:value-of select="$bookTitle"/>
                     </fo:block>
                     
-                    <fo:block xsl:use-attribute-sets="__frontmatter__logo">
+                    <fo:block-container xsl:use-attribute-sets="__frontmatter__logo__container">
+                        <fo:block xsl:use-attribute-sets="__frontmatter__logo">
                         <fo:external-graphic src="url(Customization/OpenTopic/common/artwork/logo.png)"></fo:external-graphic>
                     </fo:block>
                     
                     <fo:block xsl:use-attribute-sets="__frontmatter__link">
                         <fo:basic-link external-destination="http://xmlpress.net/">http://xmlpress.net/</fo:basic-link>
                     </fo:block>
+                    </fo:block-container>
 
                     <!-- set the subtitle -->
                     <!--
