@@ -255,7 +255,7 @@ See the accompanying license.txt file for applicable licenses.
                         <xsl:with-param name="type" select="'chapter'"/>
                     </xsl:call-template>
 
-                    <fo:block xsl:use-attribute-sets="topic.title">
+                    <fo:block xsl:use-attribute-sets="topic.title.hide">
                         <xsl:call-template name="pullPrologIndexTerms"/>
                         <xsl:for-each select="child::*[contains(@class,' topic/title ')]">
                             <xsl:apply-templates select="." mode="getTitle"/>
@@ -335,7 +335,7 @@ See the accompanying license.txt file for applicable licenses.
                         <xsl:with-param name="type" select="'appendix'"/>
                     </xsl:call-template>
 
-                    <fo:block xsl:use-attribute-sets="topic.title">
+                    <fo:block xsl:use-attribute-sets="topic.title.hide">
                         <xsl:call-template name="pullPrologIndexTerms"/>
                         <xsl:for-each select="child::*[contains(@class,' topic/title ')]">
                             <xsl:apply-templates select="." mode="getTitle"/>
@@ -498,7 +498,7 @@ See the accompanying license.txt file for applicable licenses.
                         <xsl:with-param name="type" select="'part'"/>
                     </xsl:call-template>
 
-                    <fo:block xsl:use-attribute-sets="topic.title">
+                    <fo:block xsl:use-attribute-sets="topic.title.hide">
                         <xsl:call-template name="pullPrologIndexTerms"/>
                         <xsl:for-each select="child::*[contains(@class,' topic/title ')]">
                             <xsl:apply-templates select="." mode="getTitle"/>
@@ -627,9 +627,13 @@ See the accompanying license.txt file for applicable licenses.
                             <xsl:with-param name="theVariableID" select="'Chapter with number'"/>
                             <xsl:with-param name="theParameters">
                                 <number>
-                                    <fo:block xsl:use-attribute-sets="__chapter__frontmatter__number__container">
+                                    <fo:inline xsl:use-attribute-sets="__chapter__frontmatter__number__container">
                                         <xsl:apply-templates select="key('map-id', @id)[1]" mode="topicTitleNumber"/>
-                                    </fo:block>
+                                    </fo:inline>
+                                    <xsl:text>: </xsl:text>
+                                    <fo:inline xsl:use-attribute-sets="topic.title">
+                                        <xsl:value-of select="*[contains(@class, ' topic/title ')]"/>
+                                    </fo:inline>
                                 </number>
                             </xsl:with-param>
                         </xsl:call-template>
@@ -641,9 +645,13 @@ See the accompanying license.txt file for applicable licenses.
                                 <xsl:with-param name="theVariableID" select="'Appendix with number'"/>
                                 <xsl:with-param name="theParameters">
                                     <number>
-                                        <fo:block xsl:use-attribute-sets="__chapter__frontmatter__number__container">
+                                        <fo:inline xsl:use-attribute-sets="__chapter__frontmatter__number__container">
                                             <xsl:apply-templates select="key('map-id', @id)[1]" mode="topicTitleNumber"/>
-                                        </fo:block>
+                                        </fo:inline>
+                                        <xsl:text>: </xsl:text>
+                                        <fo:inline xsl:use-attribute-sets="topic.title">
+                                            <xsl:value-of select="*[contains(@class, ' topic/title ')]"/>
+                                        </fo:inline>
                                     </number>
                                 </xsl:with-param>
                             </xsl:call-template>
@@ -669,9 +677,13 @@ See the accompanying license.txt file for applicable licenses.
                                 <xsl:with-param name="theVariableID" select="'Part with number'"/>
                                 <xsl:with-param name="theParameters">
                                     <number>
-                                        <fo:block xsl:use-attribute-sets="__chapter__frontmatter__number__container">
+                                        <fo:inline xsl:use-attribute-sets="__chapter__frontmatter__number__container">
                                             <xsl:apply-templates select="key('map-id', @id)[1]" mode="topicTitleNumber"/>
-                                        </fo:block>
+                                        </fo:inline>
+                                        <xsl:text>: </xsl:text>
+                                        <fo:inline xsl:use-attribute-sets="topic.title">
+                                            <xsl:value-of select="*[contains(@class, ' topic/title ')]"/>
+                                        </fo:inline>
                                     </number>
                                 </xsl:with-param>
                             </xsl:call-template>

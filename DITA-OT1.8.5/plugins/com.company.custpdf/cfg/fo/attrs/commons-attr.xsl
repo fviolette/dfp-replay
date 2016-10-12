@@ -116,6 +116,17 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="padding-top">16.8pt</xsl:attribute>
         <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
     </xsl:attribute-set>
+    
+    <xsl:attribute-set name="topic.title.hide" use-attribute-sets="common.title">
+        <xsl:attribute name="border-bottom">0pt solid black</xsl:attribute>
+        <xsl:attribute name="space-before">0pt</xsl:attribute>
+        <xsl:attribute name="space-after">30pt</xsl:attribute>
+        <xsl:attribute name="font-size">2pt</xsl:attribute>
+        <xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="padding-top">0pt</xsl:attribute>
+        <xsl:attribute name="color">#ffffff</xsl:attribute>
+        <xsl:attribute name="line-height">4pt</xsl:attribute>
+    </xsl:attribute-set>
 
     <xsl:attribute-set name="topic.title__content">
         <xsl:attribute name="line-height">100%</xsl:attribute>
