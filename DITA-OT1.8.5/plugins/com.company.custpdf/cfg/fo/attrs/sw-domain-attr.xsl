@@ -35,9 +35,14 @@ See the accompanying license.txt file for applicable licenses.
 
     <xsl:attribute-set name="msgph" use-attribute-sets="base-font">
         <xsl:attribute name="font-family">monospace</xsl:attribute>
+        <xsl:attribute name="font-size">9pt</xsl:attribute>
+        <xsl:attribute name="background-color">#e6e6e6</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="msgblock" use-attribute-sets="pre">
+        <xsl:attribute name="font-family">monospace</xsl:attribute>
+        <xsl:attribute name="font-size">9pt</xsl:attribute>
+        <xsl:attribute name="background-color">#e6e6e6</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="msgnum">
