@@ -16,7 +16,7 @@
       <xsl:call-template name="createLayoutMasters"/>
       <xsl:call-template name="createMetadata"/>
       <xsl:call-template name="createBookmarks"/>
-      <xsl:call-template name="createFrontMatter"/>
+<!--      <xsl:call-template name="createFrontMatter"/>-->
       <xsl:if test="not($retain-bookmap-order)">
         <xsl:call-template name="createToc"/>
       </xsl:if>
