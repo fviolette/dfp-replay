@@ -10,4 +10,6 @@
     <xsl:import href="root-processing.xsl"/>
     <xsl:import href="root-processing_fop.xsl"/>
     <xsl:import href="static-content.xsl"/>
+    <xsl:import href="tables.xsl"/>
+    <xsl:import href="task-elements.xsl"/>
 </xsl:stylesheet>
