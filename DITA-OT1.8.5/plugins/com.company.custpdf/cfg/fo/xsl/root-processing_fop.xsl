@@ -24,6 +24,7 @@
       <xsl:if test="not($retain-bookmap-order)">
         <xsl:call-template name="createIndex"/>
       </xsl:if>
+      <xsl:call-template name="createBackMatter"/>
     </fo:root>
   </xsl:template>
     
