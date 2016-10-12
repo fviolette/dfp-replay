@@ -266,9 +266,9 @@ See the accompanying license.txt file for applicable licenses.
 
             <xsl:apply-templates/>
 
-            <xsl:if test="not($retain-bookmap-order)">
+            <!--<xsl:if test="not($retain-bookmap-order)">
                 <xsl:call-template name="createIndex"/>
-            </xsl:if>
+            </xsl:if>-->
 
         </fo:root>
     </xsl:template>
