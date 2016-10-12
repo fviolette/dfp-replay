@@ -336,6 +336,7 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:attribute-set>
 
     <xsl:attribute-set name="note" use-attribute-sets="common.block">
+        <xsl:attribute name="font-size">10pt</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="note__table" use-attribute-sets="common.block">

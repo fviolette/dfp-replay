@@ -57,12 +57,14 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute-set name="info">
         <xsl:attribute name="space-before">3pt</xsl:attribute>
         <xsl:attribute name="space-after">3pt</xsl:attribute>
+        <xsl:attribute name="font-size">10pt</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="tutorialinfo">
     </xsl:attribute-set>
 
     <xsl:attribute-set name="stepresult">
+        <xsl:attribute name="font-size">10pt</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="result" use-attribute-sets="section">
@@ -81,6 +83,7 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:attribute-set>
 
     <xsl:attribute-set name="stepxmp">
+        <xsl:attribute name="font-size">10pt</xsl:attribute>
     </xsl:attribute-set>
 
     <!--Unordered steps-->
@@ -170,6 +173,7 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:attribute-set>
 
     <xsl:attribute-set name="choices.choice" use-attribute-sets="ul.li">
+        <xsl:attribute name="font-size">10pt</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="choices.choice__label" use-attribute-sets="ul.li__label">
