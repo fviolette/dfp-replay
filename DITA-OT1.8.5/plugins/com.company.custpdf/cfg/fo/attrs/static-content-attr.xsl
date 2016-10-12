@@ -237,18 +237,20 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__chapter__frontmatter__name__container">
-        <xsl:attribute name="font-size">20pt</xsl:attribute>
-        <xsl:attribute name="font-weight">bold</xsl:attribute>
-        <xsl:attribute name="border-top-style">solid</xsl:attribute>
-        <xsl:attribute name="border-bottom-style">solid</xsl:attribute>
-        <xsl:attribute name="border-top-width">2pt</xsl:attribute>
-        <xsl:attribute name="border-bottom-width">2pt</xsl:attribute>
+        <xsl:attribute name="font-size">16pt</xsl:attribute>
+        <xsl:attribute name="font-weight">normal</xsl:attribute>
+        <xsl:attribute name="border-top-style">none</xsl:attribute>
+        <xsl:attribute name="border-bottom-style">none</xsl:attribute>
+        <xsl:attribute name="border-top-width">0pt</xsl:attribute>
+        <xsl:attribute name="border-bottom-width">0pt</xsl:attribute>
         <xsl:attribute name="padding-top">10pt</xsl:attribute>
+        <xsl:attribute name="color">black</xsl:attribute>
+        <xsl:attribute name="font-family">sans-serif</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__chapter__frontmatter__number__container">
-        <xsl:attribute name="font-size">40pt</xsl:attribute>
-        <xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="font-size">16pt</xsl:attribute>
+        <xsl:attribute name="font-weight">normal</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__glossary__odd__footer" use-attribute-sets="odd__footer">
