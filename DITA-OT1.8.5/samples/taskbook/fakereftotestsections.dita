@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE reference PUBLIC "-//OASIS//DTD DITA Reference//EN" "reference.dtd">
+<reference id="fakereftotestsections">
+  <title></title>
+   <abstract>
+  <shortdesc></shortdesc>
+ </abstract>
+  <refbody>
+   <section>
+    <title>This is my test title</title>
+    <p>And this is the content of the section</p>
+   </section>
+   <section>
+    <title>Yet another title</title>
+    <p>And more useless content</p>
+   </section>
+  </refbody>
+</reference>

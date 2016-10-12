@@ -62,6 +62,7 @@
   <topicref href="taskbook/maintainserver.dita">
     <topicref href="taskbook/maintaindatabase.dita"/>
   </topicref>
+  <topicref href="taskbook/fakereftotestsections.dita"/>
 </topicref>
 <topicref href="taskbook/maintainserver.dita"></topicref>
 <topicref href="taskbook/maintaindatabase.dita"></topicref>
