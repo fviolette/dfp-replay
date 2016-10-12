@@ -173,6 +173,24 @@ See the accompanying license.txt file for applicable licenses.
                 <fo:region-before region-name="odd-glossary-header" xsl:use-attribute-sets="region-before"/>
                 <fo:region-after region-name="odd-glossary-footer" xsl:use-attribute-sets="region-after"/>
             </fo:simple-page-master>
+          
+            <fo:simple-page-master master-name="back-matter-first" xsl:use-attribute-sets="simple-page-master">
+              <fo:region-body xsl:use-attribute-sets="region-backmatter.first"/>
+            </fo:simple-page-master>
+            
+            <xsl:if test="$mirror-page-margins">
+              <fo:simple-page-master master-name="back-matter-even" xsl:use-attribute-sets="simple-page-master">
+                <fo:region-body xsl:use-attribute-sets="region-backmatter.even"/>
+              </fo:simple-page-master>
+            </xsl:if>
+            
+            <fo:simple-page-master master-name="back-matter-odd" xsl:use-attribute-sets="simple-page-master">
+              <fo:region-body xsl:use-attribute-sets="region-backmatter.odd"/>
+            </fo:simple-page-master>
+            
+            <fo:simple-page-master master-name="back-matter-last" xsl:use-attribute-sets="simple-page-master">
+              <fo:region-body xsl:use-attribute-sets="region-backmatter.last"/>
+            </fo:simple-page-master>
 
 
             <!--Sequences-->
@@ -209,6 +227,10 @@ See the accompanying license.txt file for applicable licenses.
             <xsl:with-param name="master-reference" select="'landscape'"/>
             <xsl:with-param name="first" select="false()"/>
             <xsl:with-param name="last" select="false()"/>
+          </xsl:call-template>
+          <xsl:call-template name="generate-page-sequence-master">
+            <xsl:with-param name="master-name" select="'back-matter'"/>
+            <xsl:with-param name="master-reference" select="'back-matter'"/>
           </xsl:call-template>
         </fo:layout-master-set>
     </xsl:template>
