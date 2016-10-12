@@ -145,6 +145,34 @@
   <xsl:attribute-set name="region-body__index.even" use-attribute-sets="region-body.even">
     <xsl:attribute name="column-count">2</xsl:attribute>
   </xsl:attribute-set>
+  
+  <xsl:attribute-set name="region-backmatter.first">
+    <xsl:attribute name="margin-top"><xsl:value-of select="$page-margins"/></xsl:attribute>
+    <xsl:attribute name="margin-bottom"><xsl:value-of select="$page-margins"/></xsl:attribute>
+    <xsl:attribute name="margin-left"><xsl:value-of select="$page-margins"/></xsl:attribute>
+    <xsl:attribute name="margin-right"><xsl:value-of select="$page-margins"/></xsl:attribute>
+  </xsl:attribute-set>
+  
+  <xsl:attribute-set name="region-backmatter.even">
+    <xsl:attribute name="margin-top"><xsl:value-of select="$page-margins"/></xsl:attribute>
+    <xsl:attribute name="margin-bottom"><xsl:value-of select="$page-margins"/></xsl:attribute>
+    <xsl:attribute name="margin-left"><xsl:value-of select="$page-margins"/></xsl:attribute>
+    <xsl:attribute name="margin-right"><xsl:value-of select="$page-margins"/></xsl:attribute>
+  </xsl:attribute-set>
+  
+  <xsl:attribute-set name="region-backmatter.odd">
+    <xsl:attribute name="margin-top"><xsl:value-of select="$page-margins"/></xsl:attribute>
+    <xsl:attribute name="margin-bottom"><xsl:value-of select="$page-margins"/></xsl:attribute>
+    <xsl:attribute name="margin-left"><xsl:value-of select="$page-margins"/></xsl:attribute>
+    <xsl:attribute name="margin-right"><xsl:value-of select="$page-margins"/></xsl:attribute>
+  </xsl:attribute-set>
+  
+  <xsl:attribute-set name="region-backmatter.last">
+    <xsl:attribute name="margin-top"><xsl:value-of select="$page-margins"/></xsl:attribute>
+    <xsl:attribute name="margin-bottom"><xsl:value-of select="$page-margins"/></xsl:attribute>
+    <xsl:attribute name="margin-left"><xsl:value-of select="$page-margins"/></xsl:attribute>
+    <xsl:attribute name="margin-right"><xsl:value-of select="$page-margins"/></xsl:attribute>
+  </xsl:attribute-set>
 
   <xsl:attribute-set name="region-before">
     <xsl:attribute name="extent">
