@@ -129,8 +129,13 @@ See the accompanying license.txt file for applicable licenses.
             <xsl:call-template name="insertFrontMatterStaticContents"/>
             <fo:flow flow-name="xsl-region-body">
                 <fo:block xsl:use-attribute-sets="__frontmatter">
+                    <fo:block>
+                        <xsl:value-of select="$productName"/><xsl:text> </xsl:text>
+                        <xsl:value-of select="$productVersion"/>
+                    </fo:block>
                     <!-- set the title -->
                     <fo:block xsl:use-attribute-sets="__frontmatter__title">
+                        <!--
                         <xsl:choose>
                             <xsl:when test="$map/*[contains(@class,' topic/title ')][1]">
                                 <xsl:apply-templates select="$map/*[contains(@class,' topic/title ')][1]"/>
@@ -145,15 +150,26 @@ See the accompanying license.txt file for applicable licenses.
                                 <xsl:value-of select="/descendant::*[contains(@class, ' topic/topic ')][1]/*[contains(@class, ' topic/title ')]"/>
                             </xsl:otherwise>
                         </xsl:choose>
+                        -->
+                        <xsl:value-of select="$bookTitle"/>
+                    </fo:block>
+                    
+                    <fo:block>
+                        <fo:external-graphic src="url(Customization/OpenTopic/common/artwork/logo.png)"></fo:external-graphic>
+                    </fo:block>
+                    
+                    <fo:block>
+                        <fo:basic-link external-destination="http://xmlpress.net/">http://xmlpress.net/</fo:basic-link>
                     </fo:block>
 
                     <!-- set the subtitle -->
+                    <!--
                     <xsl:apply-templates select="$map//*[contains(@class,' bookmap/booktitlealt ')]"/>
 
                     <fo:block xsl:use-attribute-sets="__frontmatter__owner">
                         <xsl:apply-templates select="$map//*[contains(@class,' bookmap/bookmeta ')]"/>
                     </fo:block>
-
+                    -->
                 </fo:block>
 
                 <!--<xsl:call-template name="createPreface"/>-->
