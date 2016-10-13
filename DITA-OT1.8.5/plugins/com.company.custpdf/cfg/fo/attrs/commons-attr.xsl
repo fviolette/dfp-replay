@@ -198,6 +198,7 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="start-indent"><xsl:value-of select="$side-col-width"/></xsl:attribute>
         <xsl:attribute name="font-style">italic</xsl:attribute>
         <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
+        <xsl:attribute name="color">#ff00ff</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="topic.topic.topic.topic.topic.topic.title__content">

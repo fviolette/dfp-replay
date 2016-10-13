@@ -60,7 +60,11 @@
 <topicref href="taskbook/maintainstorage.dita">
   <!-- mock to test heading levels -->
   <topicref href="taskbook/maintainserver.dita">
-    <topicref href="taskbook/maintaindatabase.dita"/>
+    <topicref href="taskbook/maintaindatabase.dita">
+      <topicref href="taskbook/maintainserver.dita">
+        <topicref href="taskbook/maintaindatabase.dita"/>
+      </topicref>
+    </topicref>
   </topicref>
   <topicref href="taskbook/fakereftotestsections.dita"/>
 </topicref>
