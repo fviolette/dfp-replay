@@ -342,7 +342,10 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:attribute-set>
 
     <xsl:attribute-set name="note" use-attribute-sets="common.block">
-        <xsl:attribute name="font-size">10pt</xsl:attribute>
+        <xsl:attribute name="font-size">9pt</xsl:attribute>
+        <xsl:attribute name="margin-right">.5in</xsl:attribute>
+        <xsl:attribute name="margin-left">.5in</xsl:attribute>
+        <xsl:attribute name="text-align">justify</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="note__table" use-attribute-sets="common.block">
