@@ -1616,11 +1616,11 @@ See the accompanying license.txt file for applicable licenses.
             <fo:inline xsl:use-attribute-sets="note__label">
                 <xsl:choose>
                     <xsl:when test="@type='note' or not(@type)">
-                        <fo:inline xsl:use-attribute-sets="note__label__note">
+                        <!--<fo:inline xsl:use-attribute-sets="note__label__note">
                             <xsl:call-template name="insertVariable">
                                 <xsl:with-param name="theVariableID" select="'Note'"/>
                             </xsl:call-template>
-                        </fo:inline>
+                        </fo:inline>-->
                     </xsl:when>
                     <xsl:when test="@type='notice'">
                         <fo:inline xsl:use-attribute-sets="note__label__notice">
@@ -1707,9 +1707,16 @@ See the accompanying license.txt file for applicable licenses.
                         </fo:inline>
                     </xsl:when>
                 </xsl:choose>
-                <xsl:call-template name="insertVariable">
-                  <xsl:with-param name="theVariableID" select="'#note-separator'"/>
-                </xsl:call-template>
+                <xsl:choose>
+                    <xsl:when test="@type='note' or not(@type)">
+                        <!-- don't insert separator -->
+                    </xsl:when>
+                    <xsl:otherwise>
+                    <xsl:call-template name="insertVariable">
+                            <xsl:with-param name="theVariableID" select="'#note-separator'"/>
+                        </xsl:call-template>
+                    </xsl:otherwise>
+                </xsl:choose>
             </fo:inline>
             <xsl:text>  </xsl:text>
             <xsl:apply-templates/>
