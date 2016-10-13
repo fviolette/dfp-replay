@@ -48,7 +48,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <!--Unordered list-->
     <xsl:attribute-set name="ul" use-attribute-sets="common.block">
-        <xsl:attribute name="provisional-distance-between-starts">5mm</xsl:attribute>
+        <xsl:attribute name="provisional-distance-between-starts">6mm</xsl:attribute>
         <xsl:attribute name="provisional-label-separation">1mm</xsl:attribute>
 <!--        <xsl:attribute name="margin-left">-8pt</xsl:attribute>-->
     </xsl:attribute-set>
@@ -77,7 +77,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <!--Ordered list-->
     <xsl:attribute-set name="ol" use-attribute-sets="common.block">
-        <xsl:attribute name="provisional-distance-between-starts">5mm</xsl:attribute>
+        <xsl:attribute name="provisional-distance-between-starts">6mm</xsl:attribute>
         <xsl:attribute name="provisional-label-separation">1mm</xsl:attribute>
 <!--		<xsl:attribute name="margin-left">-8pt</xsl:attribute>-->
     </xsl:attribute-set>
@@ -107,7 +107,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <!--Simple list-->
     <xsl:attribute-set name="sl" use-attribute-sets="common.block">
-        <xsl:attribute name="provisional-distance-between-starts">5mm</xsl:attribute>
+        <xsl:attribute name="provisional-distance-between-starts">6mm</xsl:attribute>
         <xsl:attribute name="provisional-label-separation">1mm</xsl:attribute>
     </xsl:attribute-set>
 
