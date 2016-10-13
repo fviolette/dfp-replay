@@ -370,6 +370,7 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="border-left-width">0pt</xsl:attribute>
         <xsl:attribute name="border-right-width">0pt</xsl:attribute>
         <xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="color">#990033</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="note__label__note">
