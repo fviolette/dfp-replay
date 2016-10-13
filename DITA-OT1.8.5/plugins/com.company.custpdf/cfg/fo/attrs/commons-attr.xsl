@@ -66,6 +66,7 @@ See the accompanying license.txt file for applicable licenses.
 
   <xsl:attribute-set name="base-font">
     <xsl:attribute name="font-size"><xsl:value-of select="$default-font-size"/></xsl:attribute>
+    <xsl:attribute name="line-height"><xsl:value-of select="$default-line-height"/></xsl:attribute>
   </xsl:attribute-set>
 
   <!-- titles -->

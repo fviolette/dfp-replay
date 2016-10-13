@@ -63,6 +63,6 @@
     <xsl:variable name="mirror-page-margins" select="true()"/>
 
     <xsl:variable name="default-font-size">11pt</xsl:variable>
-    <xsl:variable name="default-line-height">12pt</xsl:variable>
+    <xsl:variable name="default-line-height">120%</xsl:variable>
     <xsl:variable name="page-margin-landscape">5in</xsl:variable>
 </xsl:stylesheet>
