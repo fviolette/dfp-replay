@@ -174,7 +174,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <!-- Text to use for 'Note' label generated from <note> element 
          with 'type' attribute set to 'fastpath'. -->
-    <variable id="Fastpath">Fastpath</variable>
+    <variable id="Fastpath">Quick access</variable>
 
     <!-- Text to use for 'Note' label generated from <note> element 
          with 'type' attribute set to 'remember'. -->
