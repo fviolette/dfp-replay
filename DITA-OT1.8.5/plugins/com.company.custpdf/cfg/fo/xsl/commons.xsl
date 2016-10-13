@@ -954,7 +954,7 @@ See the accompanying license.txt file for applicable licenses.
                     <fo:inline xsl:use-attribute-sets="tm__content__service">SM</fo:inline>
                 </xsl:when>
                 <xsl:when test="@tmtype='tm'">
-                    <fo:inline xsl:use-attribute-sets="tm__content">&#8482;</fo:inline>
+                    <fo:inline xsl:use-attribute-sets="tm__content__tm">&#8482;</fo:inline>
                 </xsl:when>
                 <xsl:when test="@tmtype='reg'">
                     <fo:inline xsl:use-attribute-sets="tm__content">&#174;</fo:inline>
