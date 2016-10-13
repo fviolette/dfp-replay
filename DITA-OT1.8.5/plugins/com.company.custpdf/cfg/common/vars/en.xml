@@ -123,6 +123,8 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Unordered List bullet nested">&#x2014;</variable>
      
      <variable id="Checklist bullet">&#x25A1;</variable>
+     
+     <variable id="Bullet Image Path">Customization/OpenTopic/common/artwork/bullet.png</variable>
 
     <!-- The heading string to put at the top of the Table of Contents -->
     <variable id="Table of Contents">Contents</variable>

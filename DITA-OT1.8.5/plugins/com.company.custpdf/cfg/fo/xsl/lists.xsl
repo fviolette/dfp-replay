@@ -60,6 +60,11 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:template>
 
     <xsl:template match="*[contains(@class, ' topic/ul ')]/*[contains(@class, ' topic/li ')]">
+        <xsl:variable name="bulletImagePath">
+            <xsl:call-template name="insertVariable">
+                <xsl:with-param name="theVariableID" select="'Bullet Image Path'"/>
+            </xsl:call-template>
+        </xsl:variable>
         <fo:list-item xsl:use-attribute-sets="ul.li">
             <fo:list-item-label xsl:use-attribute-sets="ul.li__label">
                 <fo:block xsl:use-attribute-sets="ul.li__label__content">
@@ -67,6 +72,9 @@ See the accompanying license.txt file for applicable licenses.
                         <xsl:call-template name="commonattributes"/>
                     </fo:inline>
                     <xsl:choose>
+                        <xsl:when test="not($bulletImagePath = '')">
+                            <fo:external-graphic src="url({$bulletImagePath})" xsl:use-attribute-sets="image"/>
+                        </xsl:when>
                         <xsl:when test="../@outputclass='checklist'">
                             <fo:inline font-size="18pt" baseline-shift="10%">
                                 <xsl:call-template name="insertVariable">
