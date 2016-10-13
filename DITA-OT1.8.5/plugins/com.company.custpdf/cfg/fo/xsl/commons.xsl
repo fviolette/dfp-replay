@@ -100,6 +100,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <xsl:template match="*" mode="commonTopicProcessing">
         <xsl:apply-templates select="*[contains(@class, ' topic/title ')]"/>
+        <xsl:text> (Topic ID: </xsl:text><xsl:value-of select="@oid"/><xsl:text>)</xsl:text>
         <xsl:apply-templates select="*[contains(@class, ' topic/prolog ')]"/>
         <xsl:apply-templates select="*[not(contains(@class, ' topic/title ')) and
                                        not(contains(@class, ' topic/prolog ')) and
