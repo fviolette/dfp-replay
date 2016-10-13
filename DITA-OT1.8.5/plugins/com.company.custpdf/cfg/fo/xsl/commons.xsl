@@ -1695,6 +1695,11 @@ See the accompanying license.txt file for applicable licenses.
                     <xsl:when test="@type='other'">
                         <fo:inline xsl:use-attribute-sets="note__label__other">
                             <xsl:choose>
+                                <xsl:when test="@othertype='bestpractice'">
+                                    <xsl:call-template name="insertVariable">
+                                        <xsl:with-param name="theVariableID" select="'Best Practice'"/>
+                                    </xsl:call-template>
+                                </xsl:when>
                                 <xsl:when test="@othertype">
                                     <xsl:value-of select="@othertype"/>
                                 </xsl:when>
