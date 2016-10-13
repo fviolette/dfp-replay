@@ -7,6 +7,7 @@
     <xsl:import href="commons-attr.xsl"/>
     <xsl:import href="front-matter-attr.xsl"/>
     <xsl:import href="layout-masters-attr.xsl"/>
+    <xsl:import href="lists-attr.xsl"/>
     <xsl:import href="hi-domain-attr.xsl"/>
     <xsl:import href="pr-domain-attr.xsl"/>
     <xsl:import href="static-content-attr.xsl"/>
