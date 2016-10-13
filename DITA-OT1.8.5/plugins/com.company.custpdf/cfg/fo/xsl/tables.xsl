@@ -493,9 +493,20 @@
             <xsl:call-template name="applySpansAttrs"/>
             <xsl:call-template name="applyAlignAttrs"/>
             <xsl:call-template name="generateTableEntryBorder"/>
-            <fo:block xsl:use-attribute-sets="thead.row.entry__content">
-                <xsl:call-template name="processEntryContent"/>
-            </fo:block>
+            <xsl:choose>
+                <xsl:when test="@outputclass='rotated'">
+                    <fo:block-container reference-orientation="90" inline-progression-dimension="2mm">
+                        <fo:block xsl:use-attribute-sets="thead.row.entry__content">
+                            <xsl:call-template name="processEntryContent"/>
+                        </fo:block>
+                    </fo:block-container>
+                </xsl:when>
+                <xsl:otherwise>
+                    <fo:block xsl:use-attribute-sets="thead.row.entry__content">
+                        <xsl:call-template name="processEntryContent"/>
+                    </fo:block>
+                </xsl:otherwise>
+            </xsl:choose>
         </fo:table-cell>
     </xsl:template>
 
