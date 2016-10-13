@@ -346,6 +346,10 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="margin-right">.5in</xsl:attribute>
         <xsl:attribute name="margin-left">.5in</xsl:attribute>
         <xsl:attribute name="text-align">justify</xsl:attribute>
+        <xsl:attribute name="border-left">2pt double #990033</xsl:attribute>
+        <xsl:attribute name="border-right">2pt double #990033</xsl:attribute>
+        <xsl:attribute name="padding-left">5pt</xsl:attribute>
+        <xsl:attribute name="padding-right">5pt</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="note__table" use-attribute-sets="common.block">
