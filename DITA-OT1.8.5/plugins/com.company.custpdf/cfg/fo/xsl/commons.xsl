@@ -1318,7 +1318,7 @@ See the accompanying license.txt file for applicable licenses.
                 <xsl:value-of select="@spectitle"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:apply-templates/>
+                <xsl:text>Exercise: </xsl:text><xsl:apply-templates/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
