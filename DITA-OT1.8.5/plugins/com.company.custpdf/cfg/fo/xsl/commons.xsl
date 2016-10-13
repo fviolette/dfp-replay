@@ -1717,13 +1717,13 @@ See the accompanying license.txt file for applicable licenses.
                         <!-- don't insert separator -->
                     </xsl:when>
                     <xsl:otherwise>
-                    <xsl:call-template name="insertVariable">
+                    <!--<xsl:call-template name="insertVariable">
                             <xsl:with-param name="theVariableID" select="'#note-separator'"/>
-                        </xsl:call-template>
+                        </xsl:call-template>-->
                     </xsl:otherwise>
                 </xsl:choose>
             </fo:inline>
-            <xsl:text>  </xsl:text>
+            <!--<xsl:text>  </xsl:text>-->
             <xsl:apply-templates/>
         </fo:block>
     </xsl:template>
@@ -1751,8 +1751,8 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:variable name="noteImagePath">
             <xsl:apply-templates select="." mode="setNoteImagePath"/>
         </xsl:variable>
-        <xsl:choose>
-            <xsl:when test="not($noteImagePath = '')">
+        <!--<xsl:choose>
+            <xsl:when test="not($noteImagePath = '')">-->
                 <fo:table xsl:use-attribute-sets="note__table">
                     <fo:table-column xsl:use-attribute-sets="note__image__column"/>
                     <fo:table-column xsl:use-attribute-sets="note__text__column"/>
@@ -1769,11 +1769,11 @@ See the accompanying license.txt file for applicable licenses.
                         </fo:table-row>
                     </fo:table-body>
                 </fo:table>
-            </xsl:when>
+           <!-- </xsl:when>
             <xsl:otherwise>
                 <xsl:apply-templates select="." mode="placeNoteContent"/>
             </xsl:otherwise>
-        </xsl:choose>
+        </xsl:choose>-->
     </xsl:template>
 
     <xsl:template match="*[contains(@class,' topic/lq ')]">
