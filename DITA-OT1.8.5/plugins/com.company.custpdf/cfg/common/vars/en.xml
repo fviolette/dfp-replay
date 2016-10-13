@@ -138,7 +138,7 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Table of Contents Chapter">Chapter&#xA0;<param ref-name="number"/>:&#xA0;</variable>
 
     <!-- The string used to label an appendix within the table of contents. -->
-    <variable id="Table of Contents Appendix">Appendix&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+    <variable id="Table of Contents Appendix"><param ref-name="number"/></variable>
 
     <!-- The string used to label an part within the table of contents. -->
     <variable id="Table of Contents Part">Part&#xA0;<param ref-name="number"/>:&#xA0;</variable>
@@ -243,13 +243,13 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Search title">Search title</variable>
 
     <!-- Text to use for chapter titles.-->
-    <variable id="Chapter with number">Valid test - Chapter <param ref-name="number"/></variable>
+    <variable id="Chapter with number"><param ref-name="number"/></variable>
 
     <!-- Text to use for appendix titles.-->
     <variable id="Appendix with number">Appendix <param ref-name="number"/></variable>
 
     <!-- Text to use for part titles.-->
-    <variable id="Part with number">Part <param ref-name="number"/></variable>
+    <variable id="Part with number"><param ref-name="number"/></variable>
 
     <!-- Text to use for a label generated from <required-cleanup> element. -->
     <variable id="Required-Cleanup">[Required-Cleanup]</variable>

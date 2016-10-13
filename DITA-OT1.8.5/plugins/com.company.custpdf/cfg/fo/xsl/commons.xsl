@@ -627,10 +627,10 @@ See the accompanying license.txt file for applicable licenses.
                             <xsl:with-param name="theVariableID" select="'Chapter with number'"/>
                             <xsl:with-param name="theParameters">
                                 <number>
-                                    <fo:inline xsl:use-attribute-sets="__chapter__frontmatter__number__container">
+                                    <!--<fo:inline xsl:use-attribute-sets="__chapter__frontmatter__number__container">
                                         <xsl:apply-templates select="key('map-id', @id)[1]" mode="topicTitleNumber"/>
                                     </fo:inline>
-                                    <xsl:text>: </xsl:text>
+                                    <xsl:text>: </xsl:text>-->
                                     <fo:inline xsl:use-attribute-sets="topic.title">
                                         <xsl:value-of select="*[contains(@class, ' topic/title ')]"/>
                                     </fo:inline>
