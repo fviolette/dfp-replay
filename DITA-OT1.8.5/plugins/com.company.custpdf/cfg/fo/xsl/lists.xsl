@@ -66,9 +66,18 @@ See the accompanying license.txt file for applicable licenses.
                     <fo:inline>
                         <xsl:call-template name="commonattributes"/>
                     </fo:inline>
-                    <xsl:call-template name="insertVariable">
-                        <xsl:with-param name="theVariableID" select="'Unordered List bullet'"/>
-                    </xsl:call-template>
+                    <xsl:choose>
+                        <xsl:when test="ancestor::*[contains(@class, ' topic/li ')]">
+                            <xsl:call-template name="insertVariable">
+                                <xsl:with-param name="theVariableID" select="'Unordered List bullet nested'"/>
+                            </xsl:call-template>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:call-template name="insertVariable">
+                                <xsl:with-param name="theVariableID" select="'Unordered List bullet'"/>
+                            </xsl:call-template>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </fo:block>
             </fo:list-item-label>
 
@@ -94,7 +103,7 @@ See the accompanying license.txt file for applicable licenses.
                             <number>
                                 <xsl:choose>
                                     <xsl:when test="parent::*[contains(@class, ' topic/ol ')]/parent::*[contains(@class, ' topic/li ')]/parent::*[contains(@class, ' topic/ol ')]">
-                                        <xsl:number format="a"/>
+                                        <xsl:number format="i"/>
                                     </xsl:when>
                                     <xsl:otherwise>
                                         <xsl:number/>
