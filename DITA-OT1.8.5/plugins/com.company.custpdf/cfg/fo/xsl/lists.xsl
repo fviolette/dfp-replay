@@ -67,6 +67,13 @@ See the accompanying license.txt file for applicable licenses.
                         <xsl:call-template name="commonattributes"/>
                     </fo:inline>
                     <xsl:choose>
+                        <xsl:when test="../@outputclass='checklist'">
+                            <fo:inline font-size="18pt" baseline-shift="10%">
+                                <xsl:call-template name="insertVariable">
+                                    <xsl:with-param name="theVariableID" select="'Checklist bullet'"/>
+                                </xsl:call-template>
+                            </fo:inline>
+                        </xsl:when>
                         <xsl:when test="ancestor::*[contains(@class, ' topic/li ')]">
                             <xsl:call-template name="insertVariable">
                                 <xsl:with-param name="theVariableID" select="'Unordered List bullet nested'"/>
