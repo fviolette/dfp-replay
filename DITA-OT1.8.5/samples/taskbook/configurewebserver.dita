@@ -24,7 +24,31 @@ nothing about his subject.</note></context>
 <step><cmd>Make sure all of the right buttons are checked, or else you will
 never get it to work</cmd></step>
 <step><cmd>Go to your site library and check out a book; any book, even about
-COBOL, is likely to be more helpful than I am.</cmd></step>
+COBOL, is likely to be more helpful than I am.</cmd>
+ <!--test-->
+ <info>
+  <table>
+   <title>IsTableNumbered</title>
+   <tgroup cols="1">
+ <tbody>
+  <row>
+   <entry>IsIt?</entry>
+  </row>
+ </tbody>
+</tgroup>
+  </table>
+  <table>
+   <title>MoreThanOneTableInSameChapter</title>
+   <tgroup cols="1">
+    <tbody>
+     <row>
+      <entry>+1</entry>
+     </row>
+    </tbody>
+   </tgroup>
+  </table>
+ </info>
+</step>
 </steps>
 </taskbody>
 </task>

@@ -376,18 +376,30 @@
         </fo:block>
     </xsl:template>
 
-    <xsl:template match="*[contains(@class, ' topic/table ')]/*[contains(@class, ' topic/title ')]" mode="titleBelow">
+    <xsl:template match="*[contains(@class, ' topic/table ')]/*[contains(@class, ' topic/title ')]">
         <fo:block xsl:use-attribute-sets="table.title">
             <xsl:call-template name="commonattributes"/>
             <xsl:call-template name="insertVariable">
                 <xsl:with-param name="theVariableID" select="'Table'"/>
                 <xsl:with-param name="theParameters">
                     <number>
+                        <xsl:call-template name="getChapterPrefix"/>
+                        <xsl:text>-</xsl:text>
+                        <xsl:choose>
+                            <xsl:when test="count(ancestor-or-self::*[contains(@class, ' topic/topic')][position()=last()][count(preceding-sibling::*[contains(@class, ' topic/topic')]) > 0])">
+                                <xsl:value-of select="count(./preceding::*[contains(@class, ' topic/fig ')][child::*[contains(@class, ' topic/title ')]][ancestor-or-self::*[contains(@class, ' topic/topic')][position()=last()]]) -count(ancestor-or-self::*[contains(@class, ' topic/topic')][position()=last()]/preceding-sibling::*[contains(@class, ' topic/topic')]//*[contains(@class, ' topic/fig ')][child::*[contains(@class, ' topic/title ')]])+1"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="count(./preceding::*[contains(@class, ' topic/fig ')]
+                                    [child::*[contains(@class, ' topic/title ')]][ancestor-or-self::
+                                    *[contains(@class, ' topic/topic')][position()=last()]])+1"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
                         <xsl:number level="any" count="*[contains(@class, ' topic/table ')]/*[contains(@class, ' topic/title ')]" from="/"/>
                     </number>
-                    <title>
+                    <!--<title>
                         <xsl:apply-templates/>
-                    </title>
+                    </title>-->
                 </xsl:with-param>
             </xsl:call-template>
         </fo:block>
