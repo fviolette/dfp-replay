@@ -397,12 +397,12 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Optional Step">Optional:</variable>
 
     <!--Labels for task sections-->
-    <variable id="Task Prereq">Before you begin</variable>
-    <variable id="Task Context">About this task</variable>
-    <variable id="Task Steps">Procedure</variable>
-  <variable id="#steps-unordered-label"><variable id="Task Steps"/></variable>
-    <variable id="Task Result">Results</variable>
-    <variable id="Task Example">Example</variable>
+    <variable id="Task Prereq">Before you start</variable>
+    <variable id="Task Context"></variable>
+    <variable id="Task Steps"></variable>
+  <variable id="#steps-unordered-label"></variable>
+    <variable id="Task Result">Reality check</variable>
+    <variable id="Task Example">Show me</variable>
     <variable id="Task Postreq">What to do next</variable>
     
     <!--Glossary Variables-->
