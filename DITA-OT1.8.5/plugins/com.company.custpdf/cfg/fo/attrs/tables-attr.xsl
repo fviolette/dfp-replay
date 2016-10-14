@@ -158,6 +158,13 @@ See the accompanying license.txt file for applicable licenses.
 
   <xsl:attribute-set name="tbody.row.entry__content" use-attribute-sets="common.table.body.entry">
     <!--body cell contents-->
+    <xsl:attribute name="font-family">serif</xsl:attribute>
+    <xsl:attribute name="font-size">10pt</xsl:attribute>
+    <xsl:attribute name="color">#8A8A8A</xsl:attribute>
+    <xsl:attribute name="space-before">6pt</xsl:attribute>
+    <xsl:attribute name="space-after">6pt</xsl:attribute>
+    <xsl:attribute name="start-indent">6pt</xsl:attribute>
+    <xsl:attribute name="end-indent">6pt</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="dl">
