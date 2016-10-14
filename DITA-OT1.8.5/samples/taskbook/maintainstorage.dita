@@ -18,7 +18,7 @@
 if you want to keep it running for the next 10 years or so, you should follow
 these suggestions.</context>
 <steps>
-<step><cmd>If your drive has a low-power mode, make sure this comes on when
+ <step><cmd>If your drive <!-- test --> <xref href="#maintainstorage/last" type="step"/> has a low-power mode, make sure this comes on when
 your drive is sitting idle.</cmd><stepresult>It will not get worn out as quickly
 if it is not needlessly spinning.</stepresult></step>
 <step><cmd>Every once in a while, shake your computer.</cmd><info>This will
@@ -69,7 +69,7 @@ to use it, because it will be so busy all of the time.<!-- test --><msgblock>Moc
  <step><cmd>Mock</cmd></step>
  <step><cmd>Mock</cmd></step>
  <step><cmd>Mock</cmd></step>
- <step><cmd>Mock</cmd></step>
+ <step id="last"><cmd>Mock</cmd></step>
 </steps>
  <!-- test -->
  <result>

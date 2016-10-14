@@ -231,6 +231,14 @@ See the accompanying license.txt file for applicable licenses.
 			</xsl:call-template>
 
 			<xsl:choose>
+				<xsl:when test="@type='step'">
+					<fo:inline xsl:use-attribute-sets="xref__step">
+						<xsl:call-template name="insertVariable">
+							<xsl:with-param name="theVariableID" select="'Go to step'"/>
+						</xsl:call-template>
+					</fo:inline>
+					<xsl:copy-of select="$referenceTitle"></xsl:copy-of>
+				</xsl:when>
 				<xsl:when test="not(@scope = 'external' or not(empty(@format) or  @format = 'dita')) and not($referenceTitle = '')">
 					<xsl:copy-of select="$referenceTitle"/>
 				</xsl:when>
@@ -472,6 +480,9 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:param name="element"/>
 
         <xsl:choose>
+        	<xsl:when test="@type = 'step'">
+        		<!-- do not output page number -->
+        	</xsl:when>
             <xsl:when test="not($element) or ($destination = '')"/>
             <xsl:when test="$isTitleEmpty">
                 <fo:inline>

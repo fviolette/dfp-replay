@@ -433,4 +433,6 @@ See the accompanying license.txt file for applicable licenses.
   <variable id="#quote-end">”</variable>
   <variable id="Book Title">Valid Test - Book Title</variable>
   <variable id="Copy Year">Copy Year</variable>
+     
+  <variable id="Go to step">Go to step </variable>   
 </vars>

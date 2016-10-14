@@ -114,5 +114,10 @@ See the accompanying license.txt file for applicable licenses.
 
     <xsl:attribute-set name="xref" use-attribute-sets="common.link">
     </xsl:attribute-set>
+    
+    <xsl:attribute-set name="xref__step" use-attribute-sets="common.link">
+        <xsl:attribute name="color">red</xsl:attribute>
+        <xsl:attribute name="font-style">normal</xsl:attribute>
+    </xsl:attribute-set>
 
 </xsl:stylesheet>
