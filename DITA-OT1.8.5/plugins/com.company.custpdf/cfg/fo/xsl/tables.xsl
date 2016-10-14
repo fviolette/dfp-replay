@@ -376,7 +376,7 @@
         </fo:block>
     </xsl:template>
 
-    <xsl:template match="*[contains(@class, ' topic/table ')]/*[contains(@class, ' topic/title ')]">
+    <xsl:template match="*[contains(@class, ' topic/table ')]/*[contains(@class, ' topic/title ')]" mode="titleBelow">
         <fo:block xsl:use-attribute-sets="table.title">
             <xsl:call-template name="commonattributes"/>
             <xsl:call-template name="insertVariable">
@@ -421,6 +421,7 @@
 
                 <xsl:apply-templates/>
             </fo:table>
+            <xsl:apply-templates select="preceding-sibling::*[contains(@class, ' topic/title ')]" mode="titleBelow"/>
         </xsl:variable>
 
         <xsl:choose>
