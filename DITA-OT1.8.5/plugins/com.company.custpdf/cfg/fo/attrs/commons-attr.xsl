@@ -61,6 +61,62 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute name="border-start-width">1pt</xsl:attribute>
     <xsl:attribute name="border-start-color">black</xsl:attribute>
   </xsl:attribute-set>
+    
+    <!--DITA for Print-->
+    <xsl:attribute-set name="table.frame__top">
+        <xsl:attribute name="border-top-style">solid</xsl:attribute>
+        <xsl:attribute name="border-top-width">2pt</xsl:attribute>
+        <xsl:attribute name="border-top-color">#990033</xsl:attribute>
+    </xsl:attribute-set>
+    
+    <!--DITA for Print-->
+    <xsl:attribute-set name="table.frame__bottom">
+        <xsl:attribute name="border-bottom-style">solid</xsl:attribute>
+        <xsl:attribute name="border-bottom-width">2pt</xsl:attribute>
+        <xsl:attribute name="border-bottom-color">#990033</xsl:attribute>
+    </xsl:attribute-set>
+    
+    <!--DITA for Print-->
+    <xsl:attribute-set name="table.frame__right">
+        <xsl:attribute name="border-right-style">solid</xsl:attribute>
+        <xsl:attribute name="border-right-width">2pt</xsl:attribute>
+        <xsl:attribute name="border-right-color">#990033</xsl:attribute>
+    </xsl:attribute-set>
+    
+    <!--DITA for Print-->
+    <xsl:attribute-set name="table.frame__left">
+        <xsl:attribute name="border-left-style">solid</xsl:attribute>
+        <xsl:attribute name="border-left-width">2pt</xsl:attribute>
+        <xsl:attribute name="border-left-color">#990033</xsl:attribute>
+    </xsl:attribute-set>
+    
+    <!--DITA for Print-->
+    <xsl:attribute-set name="table.rule__top">
+        <xsl:attribute name="border-top-style">solid</xsl:attribute>
+        <xsl:attribute name="border-top-width">1pt</xsl:attribute>
+        <xsl:attribute name="border-top-color">#990033</xsl:attribute>
+    </xsl:attribute-set>
+    
+    <!--DITA for Print-->
+    <xsl:attribute-set name="table.rule__bottom">
+        <xsl:attribute name="border-bottom-style">solid</xsl:attribute>
+        <xsl:attribute name="border-bottom-width">1pt</xsl:attribute>
+        <xsl:attribute name="border-bottom-color">#990033</xsl:attribute>
+    </xsl:attribute-set>
+    
+    <!--DITA for Print-->
+    <xsl:attribute-set name="table.rule__right">
+        <xsl:attribute name="border-right-style">solid</xsl:attribute>
+        <xsl:attribute name="border-right-width">1pt</xsl:attribute>
+        <xsl:attribute name="border-right-color">#990033</xsl:attribute>
+    </xsl:attribute-set>
+    
+    <!--DITA for Print-->
+    <xsl:attribute-set name="table.rule__left">
+        <xsl:attribute name="border-left-style">solid</xsl:attribute>
+        <xsl:attribute name="border-left-width">1pt</xsl:attribute>
+        <xsl:attribute name="border-left-color">#990033</xsl:attribute>
+    </xsl:attribute-set>
 
   <xsl:attribute-set name="common.border" use-attribute-sets="common.border__top common.border__right common.border__bottom common.border__left"/>
 
