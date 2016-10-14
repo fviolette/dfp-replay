@@ -13,4 +13,6 @@
     <xsl:import href="static-content-attr.xsl"/>
     <xsl:import href="task-elements-attr.xsl"/>
     <xsl:import href="sw-domain-attr.xsl"/>
+    <xsl:import href="tables-attr.xsl"/>
+    <xsl:import href="tables-attr_fop.xsl"/>
 </xsl:stylesheet>
