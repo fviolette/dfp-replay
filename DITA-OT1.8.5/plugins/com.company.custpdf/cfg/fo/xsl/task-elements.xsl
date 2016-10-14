@@ -193,6 +193,13 @@ See the accompanying license.txt file for applicable licenses.
 
     <!--Steps-->
     <xsl:template match="*[contains(@class, ' task/steps ')]">
+        <xsl:variable name="actual-step-count" select="count(*[contains(@class, ' task/step ')])"/>
+        <fo:block>
+            <xsl:if test="$actual-step-count>4">
+                <xsl:text>This task has </xsl:text><xsl:value-of select="count(*[contains(@class, ' task/step ')])"/>
+                <xsl:text> steps.</xsl:text>
+            </xsl:if>
+        </fo:block>
         <xsl:choose>
             <xsl:when test="$GENERATE-TASK-LABELS='YES'">
               <fo:block>

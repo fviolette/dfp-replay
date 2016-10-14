@@ -17,7 +17,7 @@
 <context>There is really not much to do to maintain a hard drive. However,
 if you want to keep it running for the next 10 years or so, you should follow
 these suggestions.</context>
-<steps-unordered>
+<steps>
 <step><cmd>If your drive has a low-power mode, make sure this comes on when
 your drive is sitting idle.</cmd><stepresult>It will not get worn out as quickly
 if it is not needlessly spinning.</stepresult></step>
@@ -61,7 +61,16 @@ to use it, because it will be so busy all of the time.<!-- test --><msgblock>Moc
 </dl>
 </info>
  </step>
-</steps-unordered>
+ <!-- test -->
+ <step><cmd>Mock</cmd></step>
+ <step><cmd>Mock</cmd></step>
+ <step><cmd>Mock</cmd></step>
+ <step><cmd>Mock</cmd></step>
+ <step><cmd>Mock</cmd></step>
+ <step><cmd>Mock</cmd></step>
+ <step><cmd>Mock</cmd></step>
+ <step><cmd>Mock</cmd></step>
+</steps>
  <!-- test -->
  <result>
   End of task
