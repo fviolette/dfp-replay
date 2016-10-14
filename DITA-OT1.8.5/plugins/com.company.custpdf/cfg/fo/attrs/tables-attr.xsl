@@ -52,6 +52,8 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute name="space-before">10pt</xsl:attribute>
     <xsl:attribute name="space-after">10pt</xsl:attribute>
     <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
+    <xsl:attribute name="font-size">12pt</xsl:attribute>
+    <xsl:attribute name="color">#990033</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="__tableframe__none"/>
