@@ -48,6 +48,17 @@ to use it, because it will be so busy all of the time.<!-- test --><msgblock>Moc
    </tbody>
   </tgroup>
  </table>
+<!-- test -->
+<dl>
+ <dlhead>
+  <dthd>Formatted</dthd>
+  <ddhd>As</ddhd>
+ </dlhead>
+ <dlentry>
+  <dt>A</dt>
+  <dd>List</dd>
+ </dlentry>
+</dl>
 </info>
  </step>
 </steps-unordered>
