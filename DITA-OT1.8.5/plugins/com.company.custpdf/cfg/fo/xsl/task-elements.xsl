@@ -332,7 +332,7 @@ See the accompanying license.txt file for applicable licenses.
                     <fo:inline>
                         <xsl:call-template name="commonattributes"/>
                     </fo:inline>
-                    <xsl:number format="a) "/>
+                    <xsl:number format="i. "/>
                 </fo:block>
             </fo:list-item-label>
             <fo:list-item-body xsl:use-attribute-sets="substeps.substep__body">

@@ -119,6 +119,10 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:attribute-set>
 
     <xsl:attribute-set name="steps.step__label__content" use-attribute-sets="ol.li__label__content">
+        <xsl:attribute name="font-family">sans-serif</xsl:attribute>
+        <xsl:attribute name="font-size"><xsl:value-of select="$default-font-size"/></xsl:attribute>
+        <xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="color">#990033</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="steps.step__body" use-attribute-sets="ol.li__body">
@@ -159,7 +163,10 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:attribute-set>
 
     <xsl:attribute-set name="substeps.substep__label__content" use-attribute-sets="ol.li__label__content">
-      <xsl:attribute name="font-weight">normal</xsl:attribute>
+      <xsl:attribute name="font-family">sans-serif</xsl:attribute>
+      <xsl:attribute name="font-size">10pt</xsl:attribute>
+      <xsl:attribute name="font-weight">bold</xsl:attribute>
+      <xsl:attribute name="color">#990033</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="substeps.substep__body" use-attribute-sets="ol.li__body">
