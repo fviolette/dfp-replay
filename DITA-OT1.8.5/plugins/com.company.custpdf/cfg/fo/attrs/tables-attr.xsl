@@ -91,9 +91,15 @@ See the accompanying license.txt file for applicable licenses.
   </xsl:attribute-set>
 
   <xsl:attribute-set name="table__tableframe__all" use-attribute-sets="table__tableframe__topbot table__tableframe__sides">
+    <xsl:attribute name="border-before-width.conditionality">retain</xsl:attribute>
+    <xsl:attribute name="border-after-width.conditionality">retain</xsl:attribute>
+    <xsl:attribute name="border-after-width.length">0.5pt</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="table__tableframe__topbot" use-attribute-sets="table__tableframe__top table__tableframe__bottom">
+    <xsl:attribute name="border-before-width.conditionality">retain</xsl:attribute>
+    <xsl:attribute name="border-after-width.conditionality">retain</xsl:attribute>
+    <xsl:attribute name="border-after-width.length">0.5pt</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="table__tableframe__top" use-attribute-sets="common.border__top">
