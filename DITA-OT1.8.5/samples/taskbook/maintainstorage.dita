@@ -150,7 +150,23 @@ to use it, because it will be so busy all of the time.<!-- test --><msgblock>Moc
  <!-- test -->
  <result>
   End of task
+  <fig>
+   <image href="../image/carwash.gif"/>
+   <simpletable outputclass="numbered">
+    <sthead>    
+     <stentry>N</stentry>
+     <stentry>u</stentry>
+    </sthead>
+    <strow><stentry>1</stentry><stentry>A</stentry></strow>
+    <strow><stentry>2</stentry><stentry>B</stentry></strow>
+    <strow><stentry>3</stentry><stentry>C</stentry></strow>
+    <strow><stentry>4</stentry><stentry>D</stentry></strow>
+    <strow><stentry>5</stentry><stentry>E</stentry></strow>
+    <strow><stentry>6</stentry><stentry>F</stentry></strow>
+    <strow><stentry>7</stentry><stentry>G</stentry></strow>
+    <strow><stentry>8</stentry><stentry>H</stentry></strow>
+   </simpletable>
+  </fig>
  </result>
 </taskbody>
 </task>
-

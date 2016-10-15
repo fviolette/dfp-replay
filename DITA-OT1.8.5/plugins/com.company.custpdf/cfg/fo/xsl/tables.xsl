@@ -1315,6 +1315,15 @@
     </xsl:template>
 
     <xsl:template match="*[contains(@class, ' topic/strow ')]/*[contains(@class, ' topic/stentry ')]">
+        <xsl:variable name="current-row-count" select="number(count(../preceding-sibling::
+            *[contains(@class, ' topic/strow ')])+1)"/>
+        <xsl:variable name="preceding-row-count" select="number(count(../preceding-sibling::
+            *[contains(@class, ' topic/strow ')]))"/>
+        <xsl:variable name="preceding-entry">
+            <xsl:value-of select="count(preceding-sibling::*[contains(@class,' topic/stentry ')])"/>
+        </xsl:variable>		
+        <xsl:variable name="left-cell-count" select="$current-row-count + $preceding-row-count"/>
+        <xsl:variable name="right-cell-count" select="$left-cell-count + 1"/>
         <fo:table-cell xsl:use-attribute-sets="strow.stentry">
             <xsl:call-template name="commonattributes"/>
             <xsl:variable name="entryCol" select="count(preceding-sibling::*[contains(@class, ' topic/stentry ')]) + 1"/>
@@ -1348,9 +1357,34 @@
                     </fo:block>
                 </xsl:when>
                 <xsl:otherwise>
-                    <fo:block xsl:use-attribute-sets="strow.stentry__content">
-                        <xsl:apply-templates/>
-                    </fo:block>
+                    <xsl:choose>
+                        <xsl:when test="ancestor::*[contains(@class, ' topic/simpletable ')][1]/@outputclass = 'numbered'">
+                            <xsl:choose>
+                                <xsl:when test="not(text()) and not(node())">
+                                    <fo:block xsl:use-attribute-sets="strow.stentry__content">
+                                        <xsl:apply-templates/>
+                                    </fo:block>
+                                </xsl:when>
+                                <xsl:when test="$preceding-entry = 0">
+                                    <fo:block xsl:use-attribute-sets="strow.stentry__content">
+                                        <xsl:value-of select="$left-cell-count"/>
+                                        <xsl:text>. </xsl:text><xsl:apply-templates/>
+                                    </fo:block>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <fo:block xsl:use-attribute-sets="strow.stentry__content">
+                                        <xsl:value-of select="$right-cell-count"/>
+                                        <xsl:text>. </xsl:text><xsl:apply-templates/>
+                                    </fo:block>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <fo:block xsl:use-attribute-sets="strow.stentry__content">
+                                <xsl:apply-templates/>
+                            </fo:block>
+                        </xsl:otherwise>
+                    </xsl:choose>        
                 </xsl:otherwise>
             </xsl:choose>
         </fo:table-cell>
