@@ -417,7 +417,8 @@
             <xsl:call-template name="getTableScale"/>
         </xsl:variable>
 
-        <xsl:variable name="table">
+        <xsl:variable name="table">  <!--table-omit-header-at-break="true" => https://issues.apache.org/jira/browse/FOP-1616 -->
+
             <fo:table xsl:use-attribute-sets="table.tgroup">
                 <xsl:call-template name="commonattributes"/>
 
