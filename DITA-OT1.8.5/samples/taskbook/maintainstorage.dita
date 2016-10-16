@@ -28,7 +28,7 @@ way you will ensure that problems with the drive are found quickly. If you
 share the drive with others, it will also ensure that they are less likely
 to use it, because it will be so busy all of the time.<!-- test --><msgblock>Mock for test</msgblock><!-- test--><note type="fastpath">My test note</note><!-- test --><note type="note">My note without label</note>
 <!-- test --><note type="other" othertype="bestpractice">My bestpractice of type other and of othertype bestpractice</note>
-  <table frame="topbot" rowsep="1">
+  <table frame="topbot" rowsep="0">
   <title>Apply Formatting</title>
   <tgroup cols="8">
    <thead>
