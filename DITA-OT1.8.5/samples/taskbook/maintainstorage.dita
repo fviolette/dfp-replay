@@ -172,6 +172,9 @@ to use it, because it will be so busy all of the time.<!-- test --><msgblock>Moc
   <!-- test -->
   <image href="../image/test.jpg"/>
   <image href="../image/test.jpg" placement="break"/>
+  <!-- test -->
+  <image href="../image/carwash.gif"/>
+  <image href="../image/carwash.gif" placement="break"/>
  </result>
 </taskbody>
 </task>

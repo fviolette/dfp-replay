@@ -2116,11 +2116,21 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:param name="href"/>
         <xsl:param name="height"/>
         <xsl:param name="width"/>
-<!--Using align attribute set according to image @align attribute-->
-        <xsl:call-template name="processAttrSetReflection">
-                <xsl:with-param name="attrSet" select="concat('__align__', $imageAlign)"/>
-                <xsl:with-param name="path" select="'../../cfg/fo/attrs/commons-attr.xsl'"/>
-            </xsl:call-template>
+        <xsl:choose>
+            <xsl:when test="not(@align)">
+                <xsl:call-template name="processAttrSetReflection">
+                    <xsl:with-param name="attrSet" select="concat('__align__', 'center')"/>
+                    <xsl:with-param name="path" select="'../../cfg/fo/attrs/commons-attr.xsl'"/>
+                </xsl:call-template>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="processAttrSetReflection">
+                    <xsl:with-param name="attrSet" select="concat('__align__', $imageAlign)"/>
+                    <xsl:with-param name="path" select="'../../cfg/fo/attrs/commons-attr.xsl'"/>
+                </xsl:call-template>
+            </xsl:otherwise>
+        </xsl:choose>
+
         <xsl:choose>
             <xsl:when test="@placement='break'">
                 <fo:external-graphic src="url({$href})" xsl:use-attribute-sets="image__block">
