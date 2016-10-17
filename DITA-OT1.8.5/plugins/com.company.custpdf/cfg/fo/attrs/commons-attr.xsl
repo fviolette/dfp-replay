@@ -587,6 +587,8 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="keep-with-previous.within-line">always</xsl:attribute>
         <xsl:attribute name="baseline-shift">super</xsl:attribute>
         <xsl:attribute name="font-size">75%</xsl:attribute>
+        <xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="color">#990033</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="fn__body" use-attribute-sets="base-font">
@@ -594,6 +596,10 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="provisional-label-separation">2mm</xsl:attribute>
         <xsl:attribute name="line-height">1.2</xsl:attribute>
         <xsl:attribute name="start-indent">0pt</xsl:attribute>
+        <xsl:attribute name="font-family">sans-serif</xsl:attribute>
+        <xsl:attribute name="font-size">9pt</xsl:attribute>
+        <xsl:attribute name="font-style">italic</xsl:attribute>
+        <xsl:attribute name="color">#8a8a8a</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__align__left">

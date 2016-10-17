@@ -15,7 +15,7 @@
 </metadata></prolog>
 <taskbody>
 <steps-unordered>
-<step><cmd>If the web server crashes, restart it.</cmd></step>
+<step><cmd>If the web server crashes, <fn>restart it</fn>.</cmd></step>
 <step><cmd>Limit the number of connections to your server.</cmd><info>This
 will make it run faster.</info></step>
 <step><cmd>Make sure you do not put confidential material on your server.</cmd>
