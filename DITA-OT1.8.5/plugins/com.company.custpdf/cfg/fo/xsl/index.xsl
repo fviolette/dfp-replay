@@ -541,13 +541,16 @@ See the accompanying license.txt file for applicable licenses.
       </xsl:if>
       -->
       <xsl:if test="not($no-page)">
-        <xsl:if test="$idxs">
-          <xsl:copy-of select="$index.separator"/>
-          <fo:index-page-citation-list>
-            <xsl:for-each select="$idxs">
-              <fo:index-key-reference ref-index-key="{@value}" xsl:use-attribute-sets="__index__page__link"/>
-            </xsl:for-each>
-          </fo:index-page-citation-list>
+        <xsl:if test="$idxs and count($idxs) &gt; 0">
+          <xsl:text> </xsl:text>
+          <fo:inline xsl:use-attribute-sets="__index__page__link">
+            <fo:index-page-citation-list>
+              <xsl:for-each select="$idxs">
+                <fo:index-key-reference ref-index-key="{@value}" 
+                  xsl:use-attribute-sets="__index__page__link"/>
+              </xsl:for-each>
+            </fo:index-page-citation-list>
+          </fo:inline>
         </xsl:if>
       </xsl:if>
       <xsl:if test="@no-page = 'true'">

@@ -47,6 +47,10 @@ See the accompanying license.txt file for applicable licenses.
 
     <xsl:attribute-set name="__index__page__link" use-attribute-sets="common.link">
         <xsl:attribute name="page-number-treatment">link</xsl:attribute>
+        <xsl:attribute name="color">#990033</xsl:attribute>
+        <xsl:attribute name="font-style">italic</xsl:attribute>
+        <xsl:attribute name="font-weight">normal</xsl:attribute>
+        <xsl:attribute name="font-size">10pt</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__index__letter-group">
