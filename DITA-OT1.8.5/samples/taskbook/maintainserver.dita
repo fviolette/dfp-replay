@@ -22,5 +22,8 @@ will make it run faster.</info></step>
 <info>It should be kept in a separate folder named "Private."<!-- test --> <xref href="configuredatabase.dita"/></info></step>
 </steps-unordered>
 </taskbody>
+ <related-links>
+  <link href="configuredatabase.dita"/>
+ </related-links>
 </task>
 

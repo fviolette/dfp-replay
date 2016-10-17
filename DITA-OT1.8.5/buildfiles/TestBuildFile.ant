@@ -6,6 +6,7 @@
 <project name="WidgetUserGuide" default="samples.pdf" basedir=".">
   
   <property name="args.gen.task.lbl" value="YES"/>
+  <property name="args.rellinks" value="nofamily"/>
   <property name="dita.dir" location="C:/git/dfp-replay/DITA-OT1.8.5"/>
   <property name="output.dir" location="c:/users/fviolette/desktop/out"/>
   <property name="retain.topic.fo" value="yes"/>
