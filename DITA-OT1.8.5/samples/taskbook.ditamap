@@ -87,6 +87,8 @@
   <backmatter>
     <booklists>
       <indexlist/>
+      <tablelist/>
+      <figurelist/>
     </booklists>
   </backmatter>
 </bookmap>
