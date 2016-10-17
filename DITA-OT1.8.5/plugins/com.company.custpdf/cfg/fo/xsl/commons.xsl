@@ -802,6 +802,12 @@ See the accompanying license.txt file for applicable licenses.
                     <fo:basic-link internal-destination="{@id}" xsl:use-attribute-sets="xref__mini__toc">
                         <xsl:value-of select="child::*[contains(@class, ' topic/title ')]"/>
                     </fo:basic-link>
+                    <fo:inline>
+                        <xsl:text>&#xA0;&#xA0;</xsl:text>
+                        <xsl:call-template name="getChapterPrefix" />
+                        <xsl:text>-</xsl:text>
+                        <fo:page-number-citation ref-id="{concat('_OPENTOPIC_TOC_PROCESSING_', generate-id())}"/>
+                    </fo:inline>
                 </fo:block>
             </fo:list-item-body>
         </fo:list-item>
