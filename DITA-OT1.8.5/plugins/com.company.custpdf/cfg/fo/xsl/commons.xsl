@@ -741,50 +741,53 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:template>
 
     <xsl:template match="*" mode="createMiniToc">
-        <fo:table xsl:use-attribute-sets="__toc__mini__table">
-            <fo:table-column xsl:use-attribute-sets="__toc__mini__table__column_1"/>
-            <fo:table-column xsl:use-attribute-sets="__toc__mini__table__column_2"/>
-            <fo:table-body xsl:use-attribute-sets="__toc__mini__table__body">
-                <fo:table-row>
-                    <fo:table-cell>
-                        <fo:block xsl:use-attribute-sets="__toc__mini">
-                            <xsl:if test="*[contains(@class, ' topic/topic ')]">
-                                <fo:block xsl:use-attribute-sets="__toc__mini__header">
-                                    <xsl:call-template name="insertVariable">
-                                        <xsl:with-param name="theVariableID" select="'Mini Toc'"/>
-                                    </xsl:call-template>
-                                </fo:block>
-                                <fo:list-block xsl:use-attribute-sets="__toc__mini__list">
-                                    <xsl:apply-templates select="*[contains(@class, ' topic/topic ')]" mode="in-this-chapter-list"/>
-                                </fo:list-block>
-                            </xsl:if>
-                        </fo:block>
-                    </fo:table-cell>
-                    <fo:table-cell xsl:use-attribute-sets="__toc__mini__summary">
-                        <!--Really, it would be better to just apply-templates, but the attribute sets for shortdesc, body
-                        and abstract might indent the text.  Here, the topic body is in a table cell, and should
-                        not be indented, so each element is handled specially.-->
-                        <fo:block>
-                            <xsl:apply-templates select="*[contains(@class,' topic/titlealts ')]"/>
-                            <xsl:if test="*[contains(@class,' topic/shortdesc ')
-                                  or contains(@class, ' topic/abstract ')]/node()">
-                              <fo:block xsl:use-attribute-sets="p">
-                                <xsl:apply-templates select="*[contains(@class,' topic/shortdesc ')
-                                  or contains(@class, ' topic/abstract ')]/node()"/>
-                              </fo:block>
-                            </xsl:if>
-                            <xsl:apply-templates select="*[contains(@class,' topic/body ')]/*"/>
-
-                            <xsl:if test="*[contains(@class,' topic/related-links ')]//
-                                          *[contains(@class,' topic/link ')][not(@role) or @role!='child']">
-                                <xsl:apply-templates select="*[contains(@class,' topic/related-links ')]"/>
-                            </xsl:if>
-
-            </fo:block>
-                    </fo:table-cell>
-                </fo:table-row>
-            </fo:table-body>
-        </fo:table>
+        <!--<fo:table xsl:use-attribute-sets="__toc__mini__table">
+      <fo:table-column xsl:use-attribute-sets="__toc__mini__table__column_1"/>
+      <fo:table-column xsl:use-attribute-sets="__toc__mini__table__column_2"/>
+      <fo:table-body xsl:use-attribute-sets="__toc__mini__table__body">
+         <fo:table-row>
+            <fo:table-cell>-->
+        <fo:block xsl:use-attribute-sets="__toc__mini">
+            <xsl:if test="*[contains(@class, ' topic/topic ')]">
+                <fo:block xsl:use-attribute-sets="__toc__mini__header">
+                    <xsl:call-template name="insertVariable">
+                        <xsl:with-param name="theVariableID" select="'Mini Toc'"/>
+                    </xsl:call-template>
+                </fo:block>
+                <fo:list-block xsl:use-attribute-sets="__toc__mini__list">
+                    <xsl:apply-templates select="*[contains(@class, ' topic/topic ')]" 
+                        mode="in-this-chapter-list"/>
+                </fo:list-block>
+            </xsl:if>
+        </fo:block>
+        <!--</fo:table-cell>-->
+        <!--<fo:table-cell xsl:use-attribute-sets="__toc__mini__summary">-->
+        <!--Really, it would be better to just apply-templates, but the attribute sets 
+             for shortdesc, body and abstract might indent the text.  Here, the topic body 
+             is in a table cell, and should not be indented, so each element is handled 
+             specially.-->
+        <fo:block>
+            <xsl:apply-templates select="*[contains(@class,' topic/titlealts ')]"/>
+            <xsl:if test="*[contains(@class,' topic/shortdesc ')
+                or contains(@class, ' topic/abstract ')]/node()">
+                <fo:block xsl:use-attribute-sets="p">
+                    <xsl:apply-templates select="*[contains(@class,' topic/shortdesc ')
+                        or contains(@class, ' topic/abstract ')]/node()"/>
+                </fo:block>
+            </xsl:if>
+            <xsl:apply-templates select="*[contains(@class,' topic/body ')]/*"/>
+            <!-- Added with RFE 2976463 to fix dropped links in topics with a 
+                   ¶mini-TOC. -->
+            <xsl:if test="*[contains(@class,' topic/related-links ')]//
+                *[contains(@class,' topic/link ')][not(@role) or @role!='child']">
+                <xsl:apply-templates select="*[contains(@class,' 
+                    ¶topic/related-links ')]"/>
+            </xsl:if>
+        </fo:block>
+        <!--</fo:table-cell>
+         </fo:table-row>
+      </fo:table-body>
+   </fo:table>-->
     </xsl:template>
 
     <xsl:template match="*[contains(@class, ' topic/topic ')]" mode="in-this-chapter-list">
