@@ -130,6 +130,9 @@ See the accompanying license.txt file for applicable licenses.
     <xsl:attribute-set name="__toc__page-number">
       <xsl:attribute name="start-indent">-<xsl:value-of select="$toc.text-indent"/></xsl:attribute>
       <xsl:attribute name="keep-together.within-line">always</xsl:attribute>
+      <xsl:attribute name="font-size">10pt</xsl:attribute>
+      <xsl:attribute name="color">#990033</xsl:attribute>
+      <xsl:attribute name="font-weight">bold</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__toc__leader">
