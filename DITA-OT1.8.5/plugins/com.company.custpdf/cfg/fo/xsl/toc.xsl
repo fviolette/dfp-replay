@@ -84,6 +84,8 @@ See the accompanying license.txt file for applicable licenses.
                             </fo:inline>
                             <fo:inline xsl:use-attribute-sets="__toc__page-number">
                                 <fo:leader xsl:use-attribute-sets="__toc__leader"/>
+                                <xsl:call-template name="getChapterPrefix" />
+                                <xsl:text>-</xsl:text>
                                 <fo:page-number-citation>
                                   <xsl:attribute name="ref-id">
                                     <xsl:call-template name="generate-toc-id"/>
