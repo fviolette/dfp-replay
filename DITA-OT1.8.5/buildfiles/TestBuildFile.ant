@@ -5,6 +5,7 @@
 <!-- (c) Copyright IBM Corp. 2004, 2006 All Rights Reserved. -->
 <project name="WidgetUserGuide" default="samples.pdf" basedir=".">
   
+  <property name="args.chapter.layout" value="BASIC"/>
   <property name="args.gen.task.lbl" value="YES"/>
   <property name="args.rellinks" value="nofamily"/>
   <property name="dita.dir" location="C:/git/dfp-replay/DITA-OT1.8.5"/>
