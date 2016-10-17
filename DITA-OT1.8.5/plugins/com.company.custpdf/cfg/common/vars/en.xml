@@ -163,7 +163,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <!-- The heading to put at the top of a chapter when creating a
          chapter-level "mini-TOC" -->
-    <variable id="Mini Toc">Topics: </variable>
+     <variable id="Mini Toc"></variable>
 
     <variable id="#note-separator">: </variable>
     <!-- Text to use for 'Note' label generated from <note> element. -->
