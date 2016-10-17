@@ -44,6 +44,9 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="font-size">20pt</xsl:attribute>
         <xsl:attribute name="font-weight">bold</xsl:attribute>
         <xsl:attribute name="padding-top">16.8pt</xsl:attribute>
+        <xsl:attribute name="font-size">28pt</xsl:attribute>
+        <xsl:attribute name="font-weight">normal</xsl:attribute>
+        <xsl:attribute name="color">#000000</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__toc__link">
