@@ -431,7 +431,7 @@ See the accompanying license.txt file for applicable licenses.
         </fo:table>
       </xsl:when>
       <xsl:otherwise>
-        <fo:block xsl:use-attribute-sets="index-indents">
+        <fo:block xsl:use-attribute-sets="index-indents" text-indent=".125in">>
           <xsl:if test="count(ancestor::opentopic-index:index.entry) > 0">
             <xsl:attribute name="keep-together.within-page">always</xsl:attribute>
           </xsl:if>
