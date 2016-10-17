@@ -62,7 +62,7 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="end-indent">22pt</xsl:attribute>
         <xsl:attribute name="text-indent">-<xsl:value-of select="$toc.text-indent"/></xsl:attribute>
         <xsl:attribute name="text-align">start</xsl:attribute>
-        <xsl:attribute name="text-align-last">justify</xsl:attribute>
+        <xsl:attribute name="text-align-last">left</xsl:attribute>
         <xsl:attribute name="font-size">
             <xsl:variable name="level" select="count(ancestor-or-self::*[contains(@class, ' topic/topic ')])"/>
             <xsl:choose>
