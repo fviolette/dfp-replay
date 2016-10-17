@@ -37,10 +37,12 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="space-before">20pt</xsl:attribute>
         <xsl:attribute name="space-after">20pt</xsl:attribute>
         <xsl:attribute name="space-after.conditionality">retain</xsl:attribute>
-        <xsl:attribute name="font-size">20pt</xsl:attribute>
-        <xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="font-size">28pt</xsl:attribute>
+        <xsl:attribute name="font-weight">normal</xsl:attribute>
         <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
         <xsl:attribute name="span">all</xsl:attribute>
+        <xsl:attribute name="color">#000000</xsl:attribute>
+        <xsl:attribute name="font-family">sans-serif</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__index__page__link" use-attribute-sets="common.link">
