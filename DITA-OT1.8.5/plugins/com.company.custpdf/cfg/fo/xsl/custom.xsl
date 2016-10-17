@@ -68,5 +68,30 @@
             </xsl:when>
         </xsl:choose>
     </xsl:template>
+    
+    <xsl:template name="getChapterPrefixForIndex">
+        <xsl:param name="currentNode"/>
+        <xsl:variable name="containerNode" select="$map//*[@id=normalize-space($currentNode)]"/>
+        <xsl:variable name="chapterNumber">
+            <xsl:choose>
+                <xsl:when test="$containerNode/ancestor-or-self::*[contains(@class, ' bookmap/chapter')]">
+                    <xsl:number format="1" value="count($containerNode/ancestor-or-self::*[contains(@class, ' bookmap/chapter')]/preceding-sibling::*[contains(@class, ' bookmap/chapter')]) + 1"/>
+                </xsl:when>
+                <xsl:when test="$containerNode/ancestor-or-self::*[contains(@class, ' bookmap/appendix')]">
+                    <xsl:number format="A" value="count($containerNode/ancestor-or-self::*[contains(@class, ' bookmap/appendix')]/preceding-sibling::*[contains(@class, ' bookmap/appendix')]) + 1"/>
+                </xsl:when>
+                <xsl:when test="$containerNode/ancestor-or-self::*[contains(@class, ' bookmap/part')]">
+                    <xsl:number format="A" value="count($containerNode/ancestor-or-self::*[contains(@class, ' bookmap/part')]/preceding-sibling::*[contains(@class, ' bookmap/part')]) + 1"/>
+                </xsl:when>
+                <xsl:otherwise></xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <!-- If $chapterNumber is defined, return it.-->
+        <xsl:choose>
+            <xsl:when test="$chapterNumber != ''">
+                <xsl:value-of select="$chapterNumber"/>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
 
 </xsl:stylesheet>

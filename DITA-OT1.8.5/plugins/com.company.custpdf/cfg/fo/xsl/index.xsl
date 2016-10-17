@@ -431,7 +431,7 @@ See the accompanying license.txt file for applicable licenses.
         </fo:table>
       </xsl:when>
       <xsl:otherwise>
-        <fo:block xsl:use-attribute-sets="index-indents" text-indent=".125in">>
+        <fo:block xsl:use-attribute-sets="index-indents" text-indent=".125in">
           <xsl:if test="count(ancestor::opentopic-index:index.entry) > 0">
             <xsl:attribute name="keep-together.within-page">always</xsl:attribute>
           </xsl:if>
@@ -541,15 +541,26 @@ See the accompanying license.txt file for applicable licenses.
       </xsl:if>
       -->
       <xsl:if test="not($no-page)">
-        <xsl:if test="$idxs and count($idxs) &gt; 0">
-          <xsl:text> </xsl:text>
+        <xsl:if test="$idxs">
+          <xsl:copy-of select="$index.separator"/>
           <fo:inline xsl:use-attribute-sets="__index__page__link">
-            <fo:index-page-citation-list>
-              <xsl:for-each select="$idxs">
-                <fo:index-key-reference ref-index-key="{@value}" 
-                  xsl:use-attribute-sets="__index__page__link"/>
+            <xsl:for-each select="$idxs">
+              <xsl:for-each select="//opentopic-index:refID[@value = $idxs/@value]
+                [not(ancestor::opentopic-index:index.groups)]">
+                <fo:basic-link internal-destination="{./ancestor::*[@id][1]/@id}">
+                  <xsl:call-template name="getChapterPrefixForIndex">
+                    <xsl:with-param name="currentNode" 
+                      select="./ancestor::*[@id][1]/@id"/>
+                  </xsl:call-template>
+                  <xsl:text>-</xsl:text>
+                  <fo:page-number-citation ref-id="{./ancestor::*[@id][1]/@id}"/>
+                </fo:basic-link>
+                <xsl:if test="following::opentopic-index:refID[@value = $idxs/@value]
+                  [not(ancestor::opentopic-index:index.groups)]">
+                  <xsl:text>, </xsl:text>
+                </xsl:if>
               </xsl:for-each>
-            </fo:index-page-citation-list>
+            </xsl:for-each>
           </fo:inline>
         </xsl:if>
       </xsl:if>
