@@ -6,6 +6,7 @@
     <xsl:import href="commons.xsl"/>
     <xsl:import href="front-matter.xsl"/>
     <xsl:import href="hi-domain.xsl"/>
+    <xsl:import href="index.xsl"/>
     <xsl:import href="../layout-masters.xsl"/>
     <xsl:import href="links.xsl"/>
     <xsl:import href="lists.xsl"/>
