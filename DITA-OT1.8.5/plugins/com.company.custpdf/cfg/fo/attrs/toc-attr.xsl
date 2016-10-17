@@ -67,16 +67,26 @@ See the accompanying license.txt file for applicable licenses.
             <xsl:variable name="level" select="count(ancestor-or-self::*[contains(@class, ' topic/topic ')])"/>
             <xsl:choose>
                 <xsl:when test="$level = 1">12pt</xsl:when>
-                <xsl:otherwise><xsl:value-of select="$default-font-size"/></xsl:otherwise>
+                <xsl:otherwise>10pt</xsl:otherwise>
             </xsl:choose>
         </xsl:attribute>
         <xsl:attribute name="font-weight">
             <xsl:variable name="level" select="count(ancestor-or-self::*[contains(@class, ' topic/topic ')])"/>
             <xsl:choose>
-                <xsl:when test="$level = 1">bold</xsl:when>
+                <xsl:when test="$level = 1">normal</xsl:when>
                 <xsl:otherwise>normal</xsl:otherwise>
             </xsl:choose>
         </xsl:attribute>
+        <xsl:attribute name="color"> 
+            <xsl:variable name="level" select="count(ancestor-or-self::*
+                [contains(@class, ' topic/topic ')])"/> 
+            <xsl:choose> 
+                <xsl:when test="$level = 1">#990033</xsl:when>
+                <xsl:when test="$level = 2">#808080</xsl:when> 
+                <xsl:otherwise>#000000</xsl:otherwise>
+            </xsl:choose> 
+        </xsl:attribute>
+        <xsl:attribute name="font-family">sans-serif</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__toc__chapter__content" use-attribute-sets="__toc__topic__content">
