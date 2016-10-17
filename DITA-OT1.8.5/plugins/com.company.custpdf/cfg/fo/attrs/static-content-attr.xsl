@@ -229,11 +229,11 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__body__footnote__separator">
-        <xsl:attribute name="leader-pattern">rule</xsl:attribute>
         <xsl:attribute name="leader-length">25%</xsl:attribute>
         <xsl:attribute name="rule-thickness">0.5pt</xsl:attribute>
-        <xsl:attribute name="rule-style">solid</xsl:attribute>
-        <xsl:attribute name="color">black</xsl:attribute>
+        <xsl:attribute name="leader-pattern">dots</xsl:attribute>
+        <xsl:attribute name="rule-style">dotted</xsl:attribute>
+        <xsl:attribute name="color">#e6e6e6</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__chapter__frontmatter__name__container">
