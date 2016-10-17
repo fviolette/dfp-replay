@@ -1871,8 +1871,8 @@ See the accompanying license.txt file for applicable licenses.
                 <xsl:call-template name="get-id"/>
               </xsl:attribute>
             </xsl:if>
-            <xsl:apply-templates select="*[not(contains(@class,' topic/title '))]"/>
             <xsl:apply-templates select="*[contains(@class,' topic/title ')]"/>
+            <xsl:apply-templates select="*[not(contains(@class,' topic/title '))]"/>
         </fo:block>
     </xsl:template>
 
