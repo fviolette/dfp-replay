@@ -141,19 +141,19 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Index See Also String">See also </variable>
 
     <!-- The string used to label a chapter within the table of contents. -->
-    <variable id="Table of Contents Chapter">Chapter&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+    <variable id="Table of Contents Chapter">>> Chapter&#xA0;<param ref-name="number"/>:&#xA0;</variable>
 
     <!-- The string used to label an appendix within the table of contents. -->
-    <variable id="Table of Contents Appendix"><param ref-name="number"/></variable>
+    <variable id="Table of Contents Appendix">>> <param ref-name="number"/></variable>
 
     <!-- The string used to label an part within the table of contents. -->
-    <variable id="Table of Contents Part">Part&#xA0;<param ref-name="number"/>:&#xA0;</variable>
+    <variable id="Table of Contents Part">>> Part&#xA0;<param ref-name="number"/>:&#xA0;</variable>
 
     <!-- The string used to label an preface within the table of contents. -->
-    <variable id="Table of Contents Preface">Preface:&#xA0;</variable>
+    <variable id="Table of Contents Preface">>> Preface:&#xA0;</variable>
 
     <!-- The string used to label an preface within the table of contents. -->
-    <variable id="Table of Contents Notices"></variable>
+    <variable id="Table of Contents Notices">>> </variable>
 
     <!-- The string used to label an preface in body text. -->
     <variable id="Preface title">Preface</variable>
