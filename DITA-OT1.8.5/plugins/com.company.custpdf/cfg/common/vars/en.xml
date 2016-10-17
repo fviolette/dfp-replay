@@ -262,7 +262,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <!-- Template for generated page number of a reference 
          in printed manual. -->
-    <variable id="On the page"> on page <param ref-name="pagenum"/></variable>
+     <variable id="On the page"> (p. <param ref-name="pagenum"/>)</variable>
 
     <!-- Template for generated page number of a reference
          in printed manual, when referenced element has no title. -->
