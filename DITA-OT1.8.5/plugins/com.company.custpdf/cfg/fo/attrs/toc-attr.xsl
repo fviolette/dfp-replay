@@ -136,7 +136,7 @@ See the accompanying license.txt file for applicable licenses.
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__toc__leader">
-        <xsl:attribute name="leader-pattern">dots</xsl:attribute>
+        <xsl:attribute name="leader-pattern">rule</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__toc__indent">
