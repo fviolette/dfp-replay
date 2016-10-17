@@ -102,7 +102,10 @@
           </fo:inline>
           
           <fo:inline xsl:use-attribute-sets="__lotf__page-number">
-            <fo:leader xsl:use-attribute-sets="__lotf__leader"/>
+<!--            <fo:leader xsl:use-attribute-sets="__lotf__leader"/>-->
+            <xsl:text>&#xA0;&#xA0;</xsl:text>
+            <xsl:call-template name="getChapterPrefix"/>
+            <xsl:text>  </xsl:text>
             <fo:page-number-citation>
               <xsl:attribute name="ref-id">
                 <xsl:call-template name="get-id"/>
