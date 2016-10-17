@@ -169,6 +169,9 @@ to use it, because it will be so busy all of the time.<!-- test --><msgblock>Moc
     <strow><stentry>8</stentry><stentry>H</stentry></strow>
    </simpletable>
   </fig>
+  <!-- test -->
+  <image href="../image/test.jpg"/>
+  <image href="../image/test.jpg" placement="break"/>
  </result>
 </taskbody>
 </task>
