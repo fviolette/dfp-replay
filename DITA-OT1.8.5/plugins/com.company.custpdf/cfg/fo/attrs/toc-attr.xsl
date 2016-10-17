@@ -125,6 +125,8 @@ See the accompanying license.txt file for applicable licenses.
 
     <xsl:attribute-set name="__toc__title">
       <xsl:attribute name="end-indent"><xsl:value-of select="$toc.text-indent"/></xsl:attribute>
+      <xsl:attribute name="keep-together.within-line">auto</xsl:attribute>
+      <xsl:attribute name="hyphenate">true</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="__toc__page-number">

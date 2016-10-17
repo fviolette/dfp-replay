@@ -7,7 +7,8 @@
 <!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN"
  "../../dtd/task.dtd">
 <task id="configurestorage" xml:lang="en-us">
-<title>Configuring hard storage devices</title>
+ <!-- test -->
+<title>Configuring hard storage devices and pets and phones and mice and strange storage systems which can explode</title>
 <shortdesc>Most hard disks do not need any configuring. If they do, the instructions
 are relatively simple.</shortdesc>
 <prolog><metadata>
