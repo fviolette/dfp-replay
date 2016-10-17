@@ -501,7 +501,7 @@ See the accompanying license.txt file for applicable licenses.
                 </fo:inline>
             </xsl:when>
             <xsl:otherwise>
-                <fo:inline>
+            	<fo:inline xsl:use-attribute-sets="link__page">
                     <xsl:call-template name="insertVariable">
                         <xsl:with-param name="theVariableID" select="'On the page'"/>
                         <xsl:with-param name="theParameters">

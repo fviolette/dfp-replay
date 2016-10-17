@@ -103,11 +103,17 @@ See the accompanying license.txt file for applicable licenses.
 
     <xsl:attribute-set name="link__content" use-attribute-sets="common.link">
         <!--<xsl:attribute name="margin-left">8pt</xsl:attribute>-->
+        <xsl:attribute name="color">#990033</xsl:attribute>
+        <xsl:attribute name="font-style">normal</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="link__shortdesc" use-attribute-sets="base-font">
         <xsl:attribute name="margin-left">15pt</xsl:attribute>
         <xsl:attribute name="space-after">5pt</xsl:attribute>
+    </xsl:attribute-set>
+    
+    <xsl:attribute-set name="link__page" use-attribute-sets="base-font">
+        <xsl:attribute name="font-style">italic</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="linkpool">
