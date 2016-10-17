@@ -43,17 +43,17 @@
             <xsl:choose>
                 <!-- If there's something in $topicChapters with an id that matches the id of the context node, then I'm inside a chapter. -->
                 <xsl:when test="$topicChapters/*[@id = $id]">
-                    <xsl:number format="1"
+                    <xsl:number format="A"
                         value="count($topicChapters/*[@id = $id]/preceding-sibling::*) + 1"/>
                 </xsl:when>
                 <!-- If there's something in $topicAppendices with an id that matches the id of the context node, then I'm inside an appendix. -->
                 <xsl:when test="$topicAppendices/*[@id = $id]">
-                    <xsl:number format="A"
+                    <xsl:number format="i"
                         value="count($topicAppendices/*[@id = $id]/preceding-sibling::*) + 1"/>
                 </xsl:when>
                 <!-- If there's something in $topicParts with an id that matches the id of the context node, then I'm inside a part. -->
                 <xsl:when test="$topicParts/*[@id = $id]">
-                    <xsl:number format="I"
+                    <xsl:number format="01"
                         value="count($topicParts/*[@id = $id]/preceding-sibling::*) + 1"/>
                 </xsl:when>
                 <xsl:otherwise/>
