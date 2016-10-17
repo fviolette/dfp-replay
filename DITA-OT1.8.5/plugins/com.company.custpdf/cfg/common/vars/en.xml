@@ -215,7 +215,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <!-- Text to use for related links label.
          Renders as part of <related-links> element. -->
-    <variable id="Related Links">Related Links</variable>
+     <variable id="Related Links">Additional information</variable>
 
     <!-- Default cross-reference text prefix. Used to generate reference 
          text in case it's not specified in source. -->
