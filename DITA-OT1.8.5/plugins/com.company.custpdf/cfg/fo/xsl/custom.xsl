@@ -13,6 +13,7 @@
     <xsl:import href="static-content.xsl"/>
     <xsl:import href="tables.xsl"/>
     <xsl:import href="task-elements.xsl"/>
+    <xsl:import href="toc.xsl"/>
 
     <xsl:template match="*[contains(@class, ' topic/table ')]/*[contains(@class, ' topic/title ')]" mode="titleBelow"/>
 
