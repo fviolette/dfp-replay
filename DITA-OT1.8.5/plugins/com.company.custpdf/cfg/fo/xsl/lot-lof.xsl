@@ -92,6 +92,7 @@
                   <xsl:variable name="tableNumber">
                     <xsl:number format="1" value="count($tableset/*[@id = $id]/preceding-sibling::*) + 1" />
                   </xsl:variable>
+                  <xsl:call-template name="getChapterPrefix"/><xsl:text>-</xsl:text>
                   <xsl:value-of select="$tableNumber"/>
                 </number>
                 <title>
@@ -104,8 +105,6 @@
           <fo:inline xsl:use-attribute-sets="__lotf__page-number">
 <!--            <fo:leader xsl:use-attribute-sets="__lotf__leader"/>-->
             <xsl:text>&#xA0;&#xA0;</xsl:text>
-            <xsl:call-template name="getChapterPrefix"/>
-            <xsl:text>  </xsl:text>
             <fo:page-number-citation>
               <xsl:attribute name="ref-id">
                 <xsl:call-template name="get-id"/>
@@ -171,6 +170,7 @@
                   <xsl:variable name="figureNumber">
                     <xsl:number format="1" value="count($figureset/*[@id = $id]/preceding-sibling::*) + 1" />
                   </xsl:variable>
+                  <xsl:call-template name="getChapterPrefix"/><xsl:text>-</xsl:text>
                   <xsl:value-of select="$figureNumber"/>
                 </number>
                 <title>
