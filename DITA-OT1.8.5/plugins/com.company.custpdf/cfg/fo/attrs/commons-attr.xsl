@@ -778,5 +778,11 @@ See the accompanying license.txt file for applicable licenses.
             </xsl:choose>
         </xsl:attribute>
     </xsl:attribute-set>
+    
+    <xsl:attribute-set name="xref__mini__toc">
+        <xsl:attribute name="color">#990033</xsl:attribute>
+        <xsl:attribute name="font-style">normal</xsl:attribute>
+        <xsl:attribute name="font-weight">bold</xsl:attribute>
+    </xsl:attribute-set>
 
 </xsl:stylesheet>

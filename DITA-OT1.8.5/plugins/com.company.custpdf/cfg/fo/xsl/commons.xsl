@@ -799,7 +799,7 @@ See the accompanying license.txt file for applicable licenses.
 
             <fo:list-item-body xsl:use-attribute-sets="ul.li__body">
                 <fo:block xsl:use-attribute-sets="ul.li__content">
-                    <fo:basic-link internal-destination="{@id}" xsl:use-attribute-sets="xref">
+                    <fo:basic-link internal-destination="{@id}" xsl:use-attribute-sets="xref__mini__toc">
                         <xsl:value-of select="child::*[contains(@class, ' topic/title ')]"/>
                     </fo:basic-link>
                 </fo:block>
