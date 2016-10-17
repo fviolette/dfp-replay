@@ -322,11 +322,13 @@ See the accompanying license.txt file for applicable licenses.
             <xsl:if test="normalize-space($linkTextContent)!=''">
                 <fo:block xsl:use-attribute-sets="related-links">
 
-    				<fo:block xsl:use-attribute-sets="related-links.title">
-	    				<xsl:call-template name="insertVariable">
-		    				<xsl:with-param name="theVariableID" select="'Related Links'"/>
-			    		</xsl:call-template>
-				    </fo:block>
+                	<fo:block-container width="3in">
+                		<fo:block xsl:use-attribute-sets="related-links.title">
+		    				<xsl:call-template name="insertVariable">
+			    				<xsl:with-param name="theVariableID" select="'Related Links'"/>
+				    		</xsl:call-template>
+				    	</fo:block>
+                	</fo:block-container>
 
 				    <fo:block xsl:use-attribute-sets="related-links__content">
                         <xsl:copy-of select="$collectedLinks"/>

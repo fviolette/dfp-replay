@@ -90,6 +90,7 @@ See the accompanying license.txt file for applicable licenses.
 
     <xsl:attribute-set name="related-links.title">
 		<xsl:attribute name="font-weight">bold</xsl:attribute>
+        <xsl:attribute name="border-top">2pt solid #E6E6E6</xsl:attribute>
 	</xsl:attribute-set>
 
     <xsl:attribute-set name="linkinfo">
