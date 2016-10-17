@@ -96,8 +96,7 @@ See the accompanying license.txt file for applicable licenses.
             </xsl:for-each>
             <xsl:choose>
                 <xsl:when test="($ditaVersion &gt;= 1.1) and $map//*[contains(@class,' bookmap/toc ')][@href]"/>
-                <xsl:when test="($ditaVersion &gt;= 1.1) and ($map//*[contains(@class,' bookmap/toc ')]
-                          	or /*[contains(@class,' map/map ')][not(contains(@class,' bookmap/bookmap '))])">
+                <xsl:when test="($ditaVersion &gt;= 1.1) and ($map//*[contains(@class,' bookmap/toc ')])">
                     <fo:bookmark internal-destination="{$id.toc}">
                         <fo:bookmark-title>
                             <xsl:call-template name="insertVariable">
