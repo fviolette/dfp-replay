@@ -84,13 +84,9 @@
 <topicref href="taskbook/databasetrouble.dita"></topicref>
 </chapter>
 <appendix href="taskbook/task_appendix.dita"></appendix>
- <backmatter>
- <booklists>
-<!--
-        <topicref href="taskbook/otherbooks.dita" navtitle="Related Books"/>
-        <topicref href="taskbook/trademarks.dita" navtitle="Trademarks"/>
-        <topicref href="taskbook/Glossary.dita navtitle="Glossary"/>
-      -->
-<indexlist/></booklists>
- </backmatter> 
+  <backmatter>
+    <booklists>
+      <indexlist/>
+    </booklists>
+  </backmatter>
 </bookmap>
