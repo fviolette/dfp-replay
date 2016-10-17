@@ -17,8 +17,10 @@
       <xsl:call-template name="createMetadata"/>
       <xsl:call-template name="createBookmarks"/>
 <!--      <xsl:call-template name="createFrontMatter"/>-->
-      <xsl:if test="not($retain-bookmap-order)">
-        <xsl:call-template name="createToc"/>
+      <xsl:if test="(//*[contains(@class, ' map/map bookmap/bookmap ')]//*[contains(@class, ' bookmap/toc ')])">
+        <xsl:if test="not($retain-bookmap-order)">
+          <xsl:call-template name="createToc"/>
+        </xsl:if>
       </xsl:if>
       <xsl:apply-templates/>      
       <xsl:if test="not($retain-bookmap-order)">

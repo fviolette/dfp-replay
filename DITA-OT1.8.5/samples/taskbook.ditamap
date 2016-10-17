@@ -27,9 +27,7 @@
 <frontmatter>
 
 
-  <booklists>
-    <toc/>
-  </booklists>
+
   
 <bookabstract href="taskbook/taskbook-abstract.dita"/>
 <notices href="taskbook/notices.dita">
