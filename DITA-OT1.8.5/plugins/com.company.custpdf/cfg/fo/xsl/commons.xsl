@@ -2300,7 +2300,9 @@ See the accompanying license.txt file for applicable licenses.
                     <xsl:apply-templates/>
                 </fo:block>
         -->
-
+        <fo:inline xsl:use-attribute-sets="fn__callout">
+            <xsl:text>[</xsl:text>
+        </fo:inline>
         <fo:inline>
             <xsl:call-template name="commonattributes"/>
         </fo:inline>
@@ -2352,6 +2354,9 @@ See the accompanying license.txt file for applicable licenses.
                 </fo:list-block>
             </fo:footnote-body>
         </fo:footnote>
+        <fo:inline xsl:use-attribute-sets="fn__callout">
+            <xsl:text>]</xsl:text>
+        </fo:inline>
     </xsl:template>
 
     <xsl:template match="*[contains(@class,' topic/indexterm ')]">
