@@ -25,8 +25,12 @@
 </bookrights>
 </bookmeta>
 <frontmatter>
-<booklists>
-<toc/></booklists> 
+
+
+  <booklists>
+    <toc/>
+  </booklists>
+  
 <bookabstract href="taskbook/taskbook-abstract.dita"/>
 <notices href="taskbook/notices.dita">
 <topicref href="taskbook/trademarks.dita"></topicref>
