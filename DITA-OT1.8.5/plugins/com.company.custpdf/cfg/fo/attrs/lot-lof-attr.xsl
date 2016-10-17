@@ -15,6 +15,8 @@
     <xsl:attribute name="font-weight">normal</xsl:attribute>
     <xsl:attribute name="space-before">5pt</xsl:attribute>
     <xsl:attribute name="space-after">5pt</xsl:attribute>
+    <xsl:attribute name="color">#000000</xsl:attribute>
+    <xsl:attribute name="text-align-last">left</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name ="__lotf__leader">
@@ -26,6 +28,7 @@
   
   <xsl:attribute-set name="__lotf__page-number">
     <xsl:attribute name="keep-together.within-line">always</xsl:attribute>
+    <xsl:attribute name="font-weight">bold</xsl:attribute>
   </xsl:attribute-set>
 
 </xsl:stylesheet>
