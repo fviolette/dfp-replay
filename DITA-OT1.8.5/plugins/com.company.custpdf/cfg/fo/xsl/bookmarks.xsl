@@ -130,8 +130,7 @@ See the accompanying license.txt file for applicable licenses.
             <xsl:if test="//opentopic-index:index.groups//opentopic-index:index.entry">
                 <xsl:choose>
                     <xsl:when test="($ditaVersion &gt;= 1.1) and $map//*[contains(@class,' bookmap/indexlist ')][@href]"/>
-                    <xsl:when test="($ditaVersion &gt;= 1.1) and ($map//*[contains(@class,' bookmap/indexlist ')]
-                          	or /*[contains(@class,' map/map ')][not(contains(@class,' bookmap/bookmap '))])">
+                    <xsl:when test="($ditaVersion &gt;= 1.1) and ($map//*[contains(@class,' bookmap/indexlist ')])">
                         <fo:bookmark internal-destination="{$id.index}">
                             <fo:bookmark-title>
                                 <xsl:call-template name="insertVariable">
