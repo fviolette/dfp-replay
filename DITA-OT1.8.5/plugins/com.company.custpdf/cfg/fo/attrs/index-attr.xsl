@@ -61,7 +61,9 @@ See the accompanying license.txt file for applicable licenses.
     <!-- FIXME: Incorrectly named, should be index.group -->
     <xsl:attribute-set name="index.entry">
         <xsl:attribute name="space-after">14pt</xsl:attribute>
-        <xsl:attribute name="font-size">9pt</xsl:attribute>
+        <xsl:attribute name="font-size">11pt</xsl:attribute>
+        <xsl:attribute name="font-family">serif</xsl:attribute>
+        <xsl:attribute name="color">#8A8A8A</xsl:attribute>    
     </xsl:attribute-set>
   
     <xsl:attribute-set name="index.term">
@@ -77,6 +79,9 @@ See the accompanying license.txt file for applicable licenses.
     
     <xsl:attribute-set name="index.entry__content">
         <xsl:attribute name="start-indent">18pt</xsl:attribute>
+        <xsl:attribute name="font-size">11pt</xsl:attribute>
+        <xsl:attribute name="font-family">serif</xsl:attribute>
+        <xsl:attribute name="color">#8A8A8A</xsl:attribute>
     </xsl:attribute-set>
 
   <xsl:attribute-set name="index.see-also-entry__content" use-attribute-sets="index.entry__content">
