@@ -130,7 +130,7 @@ See the accompanying license.txt file for applicable licenses.
     <variable id="Table of Contents">Table of Contents</variable>
 
     <!-- The heading string to put at the top of the Index -->
-    <variable id="Index">Index</variable>
+    <variable id="Index">My Index at the End</variable>
 
     <variable id="Index Continued String">continued</variable>
 
