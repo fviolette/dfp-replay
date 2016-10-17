@@ -282,6 +282,9 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="space-before">5pt</xsl:attribute>
         <xsl:attribute name="space-after">10pt</xsl:attribute>
         <xsl:attribute name="keep-with-previous.within-page">always</xsl:attribute>
+        <xsl:attribute name="font-size">12pt</xsl:attribute>
+        <xsl:attribute name="font-family">sans-serif</xsl:attribute>
+        <xsl:attribute name="color">#990033</xsl:attribute>
     </xsl:attribute-set>
 
     <xsl:attribute-set name="topic" use-attribute-sets="base-font">
