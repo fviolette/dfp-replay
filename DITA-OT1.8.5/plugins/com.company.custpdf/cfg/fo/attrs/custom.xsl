@@ -11,6 +11,7 @@
     <xsl:import href="links-attr.xsl"/>
     <xsl:import href="hi-domain-attr.xsl"/>
     <xsl:import href="index-attr.xsl"/>
+    <xsl:import href="lot-lof-attr.xsl"/>
     <xsl:import href="pr-domain-attr.xsl"/>
     <xsl:import href="static-content-attr.xsl"/>
     <xsl:import href="task-elements-attr.xsl"/>

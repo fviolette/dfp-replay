@@ -10,6 +10,7 @@
     <xsl:import href="../layout-masters.xsl"/>
     <xsl:import href="links.xsl"/>
     <xsl:import href="lists.xsl"/>
+    <xsl:import href="lot-lof.xsl"/>
     <xsl:import href="root-processing.xsl"/>
     <!--<xsl:import href="root-processing_fop.xsl"/>-->
     <xsl:import href="static-content.xsl"/>
