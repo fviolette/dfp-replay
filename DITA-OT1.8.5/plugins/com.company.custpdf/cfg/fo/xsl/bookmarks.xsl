@@ -164,7 +164,7 @@ See the accompanying license.txt file for applicable licenses.
       </xsl:if>
     </xsl:template>
     
-    <xsl:template match="ot-placeholder:toc[$retain-bookmap-order]" mode="bookmark">
+    <!--<xsl:template match="ot-placeholder:toc[$retain-bookmap-order]" mode="bookmark">
         <fo:bookmark internal-destination="{$id.toc}">
             <xsl:if test="$bookmarkStyle!='EXPANDED'">
                 <xsl:attribute name="starting-state">hide</xsl:attribute>
@@ -175,7 +175,7 @@ See the accompanying license.txt file for applicable licenses.
                 </xsl:call-template>
             </fo:bookmark-title>
         </fo:bookmark>
-    </xsl:template>
+    </xsl:template>-->
     
     <xsl:template match="ot-placeholder:indexlist[$retain-bookmap-order]" mode="bookmark">
         <fo:bookmark internal-destination="{$id.index}">
