@@ -260,7 +260,7 @@ See the accompanying license.txt file for applicable licenses.
         </xsl:variable>
 
         <xsl:if test="count(exsl:node-set($toc)/*) > 0">
-            <fo:page-sequence master-reference="toc-sequence" xsl:use-attribute-sets="__force__page__count">
+            <fo:page-sequence master-reference="toc-sequence" format="i" initial-page-number="1" xsl:use-attribute-sets="__force__page__count">
 
                 <xsl:call-template name="insertTocStaticContents"/>
 
