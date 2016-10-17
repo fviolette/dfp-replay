@@ -127,7 +127,8 @@ See the accompanying license.txt file for applicable licenses.
      <variable id="Bullet Image Path">Customization/OpenTopic/common/artwork/bullet.png</variable>
 
     <!-- The heading string to put at the top of the Table of Contents -->
-    <variable id="Table of Contents">Contents</variable>
+<!--    <variable id="Table of Contents">Table of Contents</variable>-->
+    <variable id="Table of Contents"></variable>
 
     <!-- The heading string to put at the top of the Index -->
     <variable id="Index">Index</variable>
