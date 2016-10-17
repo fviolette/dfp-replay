@@ -920,7 +920,26 @@ See the accompanying license.txt file for applicable licenses.
                 <xsl:with-param name="theVariableID" select="'Figure'"/>
                 <xsl:with-param name="theParameters">
                     <number>
-                        <xsl:number level="any" count="*[contains(@class, ' topic/fig ')][child::*[contains(@class, ' topic/title ')]]" from="/"/>
+                        <xsl:call-template name="getChapterPrefix"/>
+                        <xsl:text>-</xsl:text>
+                        <xsl:choose>
+                            <xsl:when test="count(ancestor-or-self::*[contains(@class, ' topic/topic')]
+                                [position()=last()][count(preceding-sibling::*
+                                [contains(@class, ' topic/topic')]) &gt; 0])">
+                                <xsl:value-of select="count(./preceding::*[contains(@class, ' topic/fig ')]
+                                    [child::*[contains(@class, ' topic/title ')]]
+                                    [ancestor-or-self::*[contains(@class, ' topic/topic')][position()=last()]]) 
+                                    - count(ancestor-or-self::*[contains(@class, ' topic/topic')]
+                                    [position()=last()]/preceding-sibling::*[contains(@class, ' topic/topic')]
+                                    //*[contains(@class, ' topic/fig ')][child::*
+                                    [contains(@class, ' topic/title ')]])+1"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="count(./preceding::*[contains(@class, ' topic/fig ')]
+                                    [child::*[contains(@class, ' topic/title ')]][ancestor-or-self::
+                                    *[contains(@class, ' topic/topic')][position()=last()]])+1"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
                     </number>
                     <title>
                         <xsl:apply-templates/>
