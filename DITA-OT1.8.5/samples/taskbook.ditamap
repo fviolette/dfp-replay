@@ -41,7 +41,12 @@
 <topicref href="taskbook/replacecover.dita"></topicref>
 </topicref>
 <topicref href="taskbook/installwebserver.dita">
-<topicref href="taskbook/closeprograms.dita"></topicref>
+<topicref href="taskbook/closeprograms.dita">
+  <!-- test -->
+  <topicmeta>
+    <shortdesc/>
+  </topicmeta>
+</topicref>
 <topicref href="taskbook/runsetup.dita"></topicref>
 <topicref href="taskbook/restart.dita"></topicref>
 </topicref>
