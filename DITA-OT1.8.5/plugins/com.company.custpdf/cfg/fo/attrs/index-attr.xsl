@@ -54,6 +54,8 @@ See the accompanying license.txt file for applicable licenses.
         <xsl:attribute name="font-weight">bold</xsl:attribute>
         <xsl:attribute name="space-after">7pt</xsl:attribute>
         <xsl:attribute name="keep-with-next.within-column">always</xsl:attribute>
+        <xsl:attribute name="font-family">sans-serif</xsl:attribute>
+        <xsl:attribute name="color">#990033</xsl:attribute>
     </xsl:attribute-set>
 
     <!-- FIXME: Incorrectly named, should be index.group -->
