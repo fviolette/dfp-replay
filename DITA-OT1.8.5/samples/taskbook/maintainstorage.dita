@@ -151,6 +151,8 @@ to use it, because it will be so busy all of the time.<!-- test --><msgblock>Moc
  <result>
   End of task
   <fig>
+   <!-- test -->
+   <title>MyFigureTitle</title>
    <image href="../image/carwash.gif"/>
    <simpletable outputclass="numbered">
     <sthead>    
